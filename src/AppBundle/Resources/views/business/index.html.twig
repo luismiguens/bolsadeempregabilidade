@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% include 'default/_header.html.twig'%}
+
+    <div class="container-fluid">
+        <div class="row">
+
+            {% include 'default/_sidebar_admin.html.twig'%}
+
+            <div class="col-sm-9 col-md-10 main">
+                <h2 class="sub-header">Section title</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Website</th>
+                                <th>Id</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for business in businesses %}
+                                <tr>
+                                    <td><a href="{{ path('admin_business_show', { 'id': business.id }) }}">{{ business.name }}</a></td>
+                                    <td>{{ business.address }}</td>
+                                    <td>{{ business.email }}</td>
+                                    <td>{{ business.phone }}</td>
+                                    <td>{{ business.website }}</td>
+                                    <td>{{ business.id }}</td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                <a href="{{ path('admin_business_show', { 'id': business.id }) }}">show</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ path('admin_business_edit', { 'id': business.id }) }}">edit</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_business_new') }}">Create a new business</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

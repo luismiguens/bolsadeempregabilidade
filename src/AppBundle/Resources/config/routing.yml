@@ -1,0 +1,18 @@
+homepage:
+    path:      /{_locale}/index
+    defaults:  { _controller: AppBundle:Default:index, _locale: pt }
+    requirements:
+        _locale:  en|pt
+
+
+comming_soon:
+    path:      /{_locale}
+    defaults:  { _controller: AppBundle:Default:commingSoon, _locale: pt }
+    requirements:
+        _locale:  en|pt
+
+
+app_admin_business:
+    resource: "@AppBundle/Resources/config/routing/business.yml"
+    prefix:   /admin_business
+

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Business</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ business.name }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ business.address }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ business.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ business.phone }}</td>
+            </tr>
+            <tr>
+                <th>Website</th>
+                <td>{{ business.website }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ business.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_business_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_business_edit', { 'id': business.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
