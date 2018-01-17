@@ -13,7 +13,7 @@ class DefaultController extends Controller
         //return $this->render('AppBundle::default:index.html.twig');
         
         
-        return $this->render('default/index.html.twig');
+        return $this->render('AppBundle:default:index.html.twig');
         
         
         
