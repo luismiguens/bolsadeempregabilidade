@@ -1,109 +1,48 @@
 {# empty Twig template #}
 
-	<section id="business" class="section align-center">
-		<div class="container">
-                    <span class="icon section-icon icon-shopping-04"></span>
-			<h3>Empresas</h3>
-			<p class="text-alt">conhece as <span class="highlight">empresas</span></p>
-			<br />
-			<br />
+<section id="business" class="section align-center">
+    <div class="container">
+        <span class="icon section-icon icon-shopping-04"></span>
+        <h3>Empresas</h3>
+        <p class="text-alt">conhece as <span class="highlight">empresas</span></p>
+        <br />
+        <br />
 
-                        
-                        {% for business in businesses %}
-                
-                        
-                    
-                    <div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper">
-                                            
-                                            <img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" />
-                                            </div>
-					<h3 class="name">{{ business.name }}</h3>
-					<p class="text-alt"><small>{{ business.email }}</small></p>
-					<p class="about">{{ business.address }}</p>
-					{#<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>#}
-				</div>
-			</div>
-                    
-                    
-                         {% endfor %}
-                        
-                        
-			
 
-			<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker2.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">JAMES ROCK</h3>
-					<p class="text-alt"><small>VP Product @ Flopbox</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>
+        {% for business in businesses %}
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper">
+                        <img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" />
+                    </div>
+                    <h3 class="name">{{ business.name }}</h3>
+                    <p class="text-alt"><small>{{ business.email }}</small></p>
+                    <p class="about">{{ business.address }}</p>
+                    {#<ul class="speaker-socials">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    </ul>#}
+                </div>
+            </div>
+        {% endfor %}
 
-			<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker3.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">ANDREA WARRAETY</h3>
-					<p class="text-alt"><small>Designer @ Winstagrap</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>
 
-			<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker4.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">MARTIN BRANSON</h3>
-					<p class="text-alt"><small>Evangelist @ Doogle</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>
 
-			<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker5.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">AMY WARNER</h3>
-					<p class="text-alt"><small>Graphic Designer</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>
 
-			<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker2.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">ALEC KROSOVIC</h3>
-					<p class="text-alt"><small>Project Manager</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+        {#<div class="col-sm-4">
+            <div class="speaker">
+                <div class="photo-wrapper"><img src="../assets/img/speakers/speaker2.jpg" alt="John Doe" class="img-responsive"></div>
+                <h3 class="name">JAMES ROCK</h3>
+                <p class="text-alt"><small>VP Product @ Flopbox</small></p>
+                <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <ul class="speaker-socials">
+                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                </ul>
+            </div>
+        </div>#}
+
+    </div>
+</section>
