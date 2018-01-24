@@ -1,0 +1,5 @@
+AppBundle\Entity\Sponsor:
+    imageFile:
+        mapping:           sponsor_image
+        filename_property: image
+

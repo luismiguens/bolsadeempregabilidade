@@ -1,3 +1,19 @@
+app_admin_business:
+    resource: "@AppBundle/Resources/config/routing/business.yml"
+    prefix:   /admin_business
+
+app_admin_speaker:
+    resource: "@AppBundle/Resources/config/routing/speaker.yml"
+    prefix:   /admin_speaker
+
+app_admin_photo:
+    resource: "@AppBundle/Resources/config/routing/photo.yml"
+    prefix:   /admin_photo
+        
+app_admin_sponsor:
+    resource: "@AppBundle/Resources/config/routing/sponsor.yml"
+    prefix:   /admin_sponsor
+
 homepage:
     path:      /index
     defaults:  { _controller: "AppBundle:Default:index" }
@@ -7,7 +23,5 @@ comming_soon:
     path:      /
     defaults:  { _controller: "AppBundle:Default:commingSoon"}
 
-app_admin_business:
-    resource: "@AppBundle/Resources/config/routing/business.yml"
-    prefix:   /admin_business
+
 

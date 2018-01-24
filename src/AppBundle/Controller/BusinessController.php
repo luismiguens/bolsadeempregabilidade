@@ -41,8 +41,12 @@ class BusinessController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($business);
             $em->flush();
+            
+             $this->get('session')->getFlashBag()->add(
+                    'notice', 'Empresa criada com sucesso!'
+            );
 
-            return $this->redirectToRoute('admin_business_show', array('id' => $business->getId(), 'msg'=>'ok'));
+            return $this->redirectToRoute('admin_business_edit', array('id' => $business->getId()));
         }
 
         return $this->render('business/new.html.twig', array(
@@ -55,30 +59,34 @@ class BusinessController extends Controller
      * Finds and displays a business entity.
      *
      */
-    public function showAction(Business $business)
-    {
-        $deleteForm = $this->createDeleteForm($business);
-
-        return $this->render('business/show.html.twig', array(
-            'business' => $business,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
+//    public function showAction(Business $business)
+//    {
+//        $deleteForm = $this->createDeleteForm($business);
+//
+//        return $this->render('business/show.html.twig', array(
+//            'business' => $business,
+//            'delete_form' => $deleteForm->createView(),
+//        ));
+//    }
 
     /**
      * Displays a form to edit an existing business entity.
      *
      */
     public function editAction(Request $request, Business $business)
-    {dump('ok');
+    {
         $deleteForm = $this->createDeleteForm($business);
         $editForm = $this->createForm('AppBundle\Form\BusinessType', $business);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-dump('ok');
-            return $this->redirectToRoute('admin_business_edit', array('id' => $business->getId(), 'msg'=>'ok'));
+            
+             $this->get('session')->getFlashBag()->add(
+                    'notice', 'Empresa actualizada com sucesso!'
+            );
+
+            return $this->redirectToRoute('admin_business_edit', array('id' => $business->getId()));
         }
 
         return $this->render('business/edit.html.twig', array(

@@ -1,0 +1,24 @@
+admin_photo_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Photo:index" }
+    methods:  GET
+
+admin_photo_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Photo:show" }
+    methods:  GET
+
+admin_photo_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Photo:new" }
+    methods:  [GET, POST]
+
+admin_photo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Photo:edit" }
+    methods:  [GET, POST]
+
+admin_photo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Photo:delete" }
+    methods:  DELETE

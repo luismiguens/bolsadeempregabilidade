@@ -1,0 +1,53 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block body %}
+    <h1>Speakers list</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Profession</th>
+                <th>Presentation</th>
+                <th>Facebook</th>
+                <th>Twitter</th>
+                <th>Google</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for speaker in speakers %}
+            <tr>
+                 <td>{{ speaker.id }}</td>
+                <td>{{ speaker.name }}</td>
+                <td><img src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{speaker.image }}" /></td>
+                <td>{{ speaker.profession }}</td>
+                <td>{{ speaker.presentation }}</td>
+                <td>{{ speaker.facebook }}</td>
+                <td>{{ speaker.twitter }}</td>
+                <td>{{ speaker.google }}</td>
+               
+                <td>
+                    <ul>
+                        {#<li>
+                            <a href="{{ path('admin_speaker_show', { 'id': speaker.id }) }}">show</a>
+                        </li>#}
+                        <li>
+                            <a href="{{ path('admin_speaker_edit', { 'id': speaker.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_speaker_new') }}">Create a new speaker</a>
+        </li>
+    </ul>
+{% endblock %}

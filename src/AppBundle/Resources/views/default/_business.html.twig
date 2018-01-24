@@ -2,24 +2,36 @@
 
 	<section id="business" class="section align-center">
 		<div class="container">
-			<h5 class="heading-alt">3 columns: no wrapper</h5>
-			<p class="text-alt">Meet our <span class="highlight">professonals</span></p>
+                    <span class="icon section-icon icon-shopping-04"></span>
+			<h3>Empresas</h3>
+			<p class="text-alt">conhece as <span class="highlight">empresas</span></p>
 			<br />
 			<br />
 
-			<div class="col-sm-4">
+                        
+                        {% for business in businesses %}
+                
+                        
+                    
+                    <div class="col-sm-4">
 				<div class="speaker">
-					<div class="photo-wrapper"><img src="../assets/img/speakers/speaker1.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">ERIC BOLDY</h3>
-					<p class="text-alt"><small>Project Manager</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
+					<div class="photo-wrapper"><img src="" alt="{{ business.name }}" class="img-responsive"></div>
+					<h3 class="name">{{ business.name }}</h3>
+					<p class="text-alt"><small>{{ business.email }}</small></p>
+					<p class="about">{{ business.address }}</p>
+					{#<ul class="speaker-socials">
 						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
 						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
 						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
+					</ul>#}
 				</div>
 			</div>
+                    
+                    
+                         {% endfor %}
+                        
+                        
+			
 
 			<div class="col-sm-4">
 				<div class="speaker">

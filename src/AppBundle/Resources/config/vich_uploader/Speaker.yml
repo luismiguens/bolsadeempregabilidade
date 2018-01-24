@@ -1,0 +1,5 @@
+AppBundle\Entity\Speaker:
+    imageFile:
+        mapping:           speaker_image
+        filename_property: image
+

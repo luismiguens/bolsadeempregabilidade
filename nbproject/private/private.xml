@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/config/routing.yml</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/config/routing.yml</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Controller/DefaultController.php</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/comming-soon.html.twig</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/base.html_.twig</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/base.html.twig</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/config/parameters.yml</file>
-            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/composer.json</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/config/vich_uploader/Business.yml</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/config/doctrine/Business.orm.xml</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/base_admin.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Form/BusinessType.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/config/config.yml</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Business.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Photo.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Speaker.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Sponsor.php</file>
         </group>
     </open-files>
 </project-private>

@@ -11,9 +11,17 @@ class DefaultController extends Controller
        public function indexAction(Request $request) {
 
         //return $this->render('AppBundle::default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $businesses = $em->getRepository('AppBundle:Business')->findAll();
+        $speakers = $em->getRepository('AppBundle:Speaker')->findAll();
+
+  
         
-        
-        return $this->render('AppBundle:default:index.html.twig');
+        return $this->render('AppBundle:default:index.html.twig', array(
+            'businesses' => $businesses,
+            'speakers' => $speakers,
+        ));
         
         
         

@@ -68,3 +68,54 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+
+
+vich_uploader:
+    db_driver: orm
+    twig:       true
+    mappings:
+        photo_image:
+            uri_prefix:         /uploads/photo
+            upload_destination: %kernel.root_dir%/../web/uploads/photo
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid
+        business_image:
+            uri_prefix:         /uploads/business
+            upload_destination: %kernel.root_dir%/../web/uploads/business
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid    
+        sponsor_image:
+            uri_prefix:         /uploads/sponsor
+            upload_destination: %kernel.root_dir%/../web/uploads/sponsor
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid   
+        speaker_image:
+            uri_prefix:         /uploads/speaker
+            upload_destination: %kernel.root_dir%/../web/uploads/speaker
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid   
+            
+            
+            
+            
+#http://symfony.com/doc/master/bundles/LiipImagineBundle/filters.html
+liip_imagine:
+    resolvers:
+       default:
+          web_path: ~
+    filter_sets:
+        cache: ~
+        small_thumb:
+            quality: 100
+            filters:
+                thumbnail: { size: [100, 100], mode: outbound }
+                

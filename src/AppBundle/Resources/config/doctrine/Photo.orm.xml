@@ -19,5 +19,17 @@
         <option name="fixed"/>
       </options>
     </field>
+    
+    
+    
+<!--    <field name="image" type="string" column="image" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>-->
+        <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
+    
+    
+    
   </entity>
 </doctrine-mapping>

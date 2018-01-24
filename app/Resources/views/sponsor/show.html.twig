@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sponsor</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ sponsor.name }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ sponsor.image }}</td>
+            </tr>
+            <tr>
+                <th>Website</th>
+                <td>{{ sponsor.website }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if sponsor.updatedAt %}{{ sponsor.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ sponsor.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_sponsor_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_sponsor_edit', { 'id': sponsor.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

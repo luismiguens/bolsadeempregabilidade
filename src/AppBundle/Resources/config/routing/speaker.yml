@@ -1,0 +1,24 @@
+admin_speaker_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Speaker:index" }
+    methods:  GET
+
+admin_speaker_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Speaker:show" }
+    methods:  GET
+
+admin_speaker_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Speaker:new" }
+    methods:  [GET, POST]
+
+admin_speaker_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Speaker:edit" }
+    methods:  [GET, POST]
+
+admin_speaker_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Speaker:delete" }
+    methods:  DELETE

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>Home</title>
+
+        <meta name="description" content="PSD to HTML5+CSS3 conversion.">
+        <meta name="keywords" content="PSD, HTML5, CSS3">
+        <meta name="author" content="Vivaco">
+
+        <link rel="shortcut icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="apple-touch-icon" sizes="72x72" href="">
+        <link rel="apple-touch-icon" sizes="114x114" href="">
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/custom-animations.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/style.css') }}" />
+        {% endblock %}
+
+
+        <!--[if lt IE 9]>
+                <script src="{{ asset('bundles/app/assets/js/html5shiv.js') }}"></script>
+                <script src="{{ asset('bundles/app/assets/js/respond.min.js') }}"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        {#<div class="preloader-mask">
+            <div class="preloader"></div>
+        </div>#}
+
+
+        
+        {% include 'AppBundle:default:_header.html.twig'   with {'selected_menu': 'homepage'} %}
+        
+        <!-- begin page -->
+        
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    {#<li class="active"><a href="#">Overview</a></li>#}
+                    <li><a href="{{ path('admin_business_index') }}">Empresas</a></li>
+                    <li><a href="{{ path('admin_speaker_index') }}">Oradores</a></li>
+                    <li><a href="{{ path('admin_photo_index') }}">Galeria</a></li>
+                    <li><a href="{{ path('admin_sponsor_index') }}">Patrocinadores</a></li>
+                </ul>
+                
+            </div>
+            <div class="col-sm-9 col-md-10  main">
+        {% block body %}
+
+
+        {% endblock %}
+          
+
+
+            </div>
+        </div>
+    </div>
+<!-- end page -->
+
+        <div class="modal-window" data-modal="0" style="background-color: rgba(2, 2, 2, 0.85);">
+            <div class="modal-box iframe-box iframe-video">
+                <span class="close-btn icon icon-office-52"></span>
+
+                <iframe src="https://www.youtube.com/embed/goH-Pv1w6xo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+
+        {% block javascripts %}
+
+            <!--[if lt IE 9]>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-1.11.3.min.js?ver=1') }}"></script>
+            <![endif]-->
+            <!--[if (gte IE 9) | (!IE)]><!-->
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-2.1.4.min.js?ver=1') }}"></script>
+            <!--<![endif]-->
+
+            <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/bootstrap.min.js') }}"></script>
+            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.validate.min.js') }}"></script>#}
+            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/toastr.min.js') }}"></script>#}
+            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.waypoints.min.js') }}"></script>#}
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.appear.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.plugin.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.countTo.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/masonry.pkgd.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/modal-box.js') }}"></script>
+            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/ventcamp.js') }}"></script>#}
+
+        {% endblock %}
+    </body>
+</html>

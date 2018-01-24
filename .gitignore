@@ -14,3 +14,8 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/web/thumbnails/*
+/web/uploads/business/*
+/web/uploads/sponsor/*
+/web/uploads/photo/*
+/web/uploads/speaker/*

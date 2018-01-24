@@ -1,0 +1,47 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block body %}
+    <h1>Sponsors list</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Website</th>
+                <th>Updatedat</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sponsor in sponsors %}
+            <tr>
+                <td>{{ sponsor.id }}</td>
+                <td>{{ sponsor.name }}</td>
+                <td><img src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{sponsor.image }}" /></td>
+                <td>{{ sponsor.website }}</td>
+                <td>{% if sponsor.updatedAt %}{{ sponsor.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                
+                <td>
+                    <ul>
+                        {#<li>
+                            <a href="{{ path('admin_sponsor_show', { 'id': sponsor.id }) }}">show</a>
+                        </li>#}
+                        <li>
+                            <a href="{{ path('admin_sponsor_edit', { 'id': sponsor.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_sponsor_new') }}">Create a new sponsor</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Speaker</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ speaker.name }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ speaker.image }}</td>
+            </tr>
+            <tr>
+                <th>Profession</th>
+                <td>{{ speaker.profession }}</td>
+            </tr>
+            <tr>
+                <th>Presentation</th>
+                <td>{{ speaker.presentation }}</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td>{{ speaker.facebook }}</td>
+            </tr>
+            <tr>
+                <th>Twitter</th>
+                <td>{{ speaker.twitter }}</td>
+            </tr>
+            <tr>
+                <th>Google</th>
+                <td>{{ speaker.google }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ speaker.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_speaker_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_speaker_edit', { 'id': speaker.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
