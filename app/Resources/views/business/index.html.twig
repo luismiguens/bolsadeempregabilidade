@@ -10,7 +10,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Logotipo</th>
-                <th>Address</th>
+                <th>Presentation</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Website</th>
@@ -23,7 +23,7 @@
                     <td>{{ business.id }}</td>
                     <td>{{ business.name }}</td>
                      <td><img src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{business.image }}" /> </td>
-                    <td>{{ business.address }}</td>
+                    <td>{{ business.presentation }}</td>
                     <td>{{ business.email }}</td>
                     <td>{{ business.phone }}</td>
                     <td>{{ business.website }}</td>

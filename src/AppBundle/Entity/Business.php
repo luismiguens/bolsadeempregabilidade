@@ -18,7 +18,7 @@ class Business
     /**
      * @var string
      */
-    private $address;
+    private $presentation;
 
     /**
      * @var string
@@ -101,27 +101,27 @@ class Business
     }
 
     /**
-     * Set address
+     * Set presentation
      *
-     * @param string $address
+     * @param string $presentation
      *
      * @return Business
      */
-    public function setAddress($address)
+    public function setPresentation($presentation)
     {
-        $this->address = $address;
+        $this->presentation = $presentation;
 
         return $this;
     }
 
     /**
-     * Get address
+     * Get presentation
      *
      * @return string
      */
-    public function getAddress()
+    public function getPresentation()
     {
-        return $this->address;
+        return $this->presentation;
     }
 
     /**
