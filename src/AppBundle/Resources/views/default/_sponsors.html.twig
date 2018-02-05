@@ -13,7 +13,7 @@
                             
                             {% for key,sponsor in sponsors %}
                             
-				<div class="sponsor inline"><img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" /></div>
+                                <div class="sponsor inline"><a targer="_blank" href="{{sponsor.website}}"><img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" /></a></div>
 				{#<div class="sponsor inline"><img src="assets/img/sponsors/sponsor2.png" alt=""></div>
 				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor3.png" alt=""></div>
 				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor4.png" alt=""></div>
