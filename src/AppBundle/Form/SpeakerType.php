@@ -18,9 +18,9 @@ class SpeakerType extends AbstractType
                 ->add('imageFile', VichImageType::class, ['required' => false,'allow_delete' => true])
                 ->add('profession')
                 ->add('presentation')
-                ->add('facebook')
-                ->add('twitter')
-                ->add('google');
+//                ->add('facebook')
+//                ->add('twitter')
+                ->add('linkedin');
     }
     
     /**
