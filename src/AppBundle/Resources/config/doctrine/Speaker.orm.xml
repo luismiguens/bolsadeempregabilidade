@@ -24,12 +24,12 @@
         <option name="fixed"/>
       </options>
     </field>
-    <field name="facebook" type="string" column="facebook" length="80" nullable="true">
+    <field name="linkedin" type="string" column="linkedin" length="80" nullable="true">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-    <field name="twitter" type="string" column="twitter" length="80" nullable="true">
+<!--    <field name="twitter" type="string" column="twitter" length="80" nullable="true">
       <options>
         <option name="fixed"/>
       </options>
@@ -38,7 +38,7 @@
       <options>
         <option name="fixed"/>
       </options>
-    </field>
+    </field>-->
     
     
     

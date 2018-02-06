@@ -33,17 +33,17 @@ class Speaker
     /**
      * @var string
      */
-    private $facebook;
-
-    /**
-     * @var string
-     */
-    private $twitter;
-
-    /**
-     * @var string
-     */
-    private $google;
+    private $linkedin;
+//
+//    /**
+//     * @var string
+//     */
+//    private $twitter;
+//
+//    /**
+//     * @var string
+//     */
+//    private $google;
 
     /**
      * @var integer
@@ -169,78 +169,78 @@ class Speaker
     {
         return $this->presentation;
     }
-
-    /**
-     * Set facebook
-     *
-     * @param string $facebook
-     *
-     * @return Speaker
-     */
-    public function setFacebook($facebook)
-    {
-        $this->facebook = $facebook;
-
-        return $this;
-    }
-
-    /**
-     * Get facebook
-     *
-     * @return string
-     */
-    public function getFacebook()
-    {
-        return $this->facebook;
-    }
-
-    /**
-     * Set twitter
-     *
-     * @param string $twitter
-     *
-     * @return Speaker
-     */
-    public function setTwitter($twitter)
-    {
-        $this->twitter = $twitter;
-
-        return $this;
-    }
-
-    /**
-     * Get twitter
-     *
-     * @return string
-     */
-    public function getTwitter()
-    {
-        return $this->twitter;
-    }
-
-    /**
-     * Set google
-     *
-     * @param string $google
-     *
-     * @return Speaker
-     */
-    public function setGoogle($google)
-    {
-        $this->google = $google;
-
-        return $this;
-    }
-
-    /**
-     * Get google
-     *
-     * @return string
-     */
-    public function getGoogle()
-    {
-        return $this->google;
-    }
+//
+//    /**
+//     * Set facebook
+//     *
+//     * @param string $facebook
+//     *
+//     * @return Speaker
+//     */
+//    public function setFacebook($facebook)
+//    {
+//        $this->facebook = $facebook;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get facebook
+//     *
+//     * @return string
+//     */
+//    public function getFacebook()
+//    {
+//        return $this->facebook;
+//    }
+//
+//    /**
+//     * Set twitter
+//     *
+//     * @param string $twitter
+//     *
+//     * @return Speaker
+//     */
+//    public function setTwitter($twitter)
+//    {
+//        $this->twitter = $twitter;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get twitter
+//     *
+//     * @return string
+//     */
+//    public function getTwitter()
+//    {
+//        return $this->twitter;
+//    }
+//
+//    /**
+//     * Set google
+//     *
+//     * @param string $google
+//     *
+//     * @return Speaker
+//     */
+//    public function setGoogle($google)
+//    {
+//        $this->google = $google;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get google
+//     *
+//     * @return string
+//     */
+//    public function getGoogle()
+//    {
+//        return $this->google;
+//    }
 
     /**
      * Get id
@@ -291,6 +291,14 @@ class Speaker
         // get rid of the __DIR__ so it doesn't screw up
         // when displaying uploaded doc/image in the view.
         return 'uploads/speaker';
+    }
+
+    function getLinkedin() {
+        return $this->linkedin;
+    }
+
+    function setLinkedin($linkedin) {
+        $this->linkedin = $linkedin;
     }
 
 
