@@ -15,12 +15,12 @@ app_admin_sponsor:
     prefix:   /admin_sponsor
 
 homepage:
-    path:      /index
+    path:      /
     defaults:  { _controller: "AppBundle:Default:index" }
 
 
 comming_soon:
-    path:      /
+    path:      /comming_soon
     defaults:  { _controller: "AppBundle:Default:commingSoon"}
 
 

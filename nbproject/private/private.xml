@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_speakers.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_schedule.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/index.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/base.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Form/SpeakerType.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/speaker/index.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Form/SponsorType.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/config/doctrine/Speaker.orm.xml</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_footer.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_counters.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_about.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Speaker.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/speaker/edit.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/config/parameters.yml</file>
+        </group>
     </open-files>
 </project-private>
