@@ -1,56 +1,54 @@
 {# empty Twig template #}
 
-	<section id="speakers" class="section align-center">
-		<div class="container">
-			<span class="icon section-icon icon-faces-users-04"></span>
-			<h3>Oradores</h3>
-			<p class="text-alt">Conhece os <span class="highlight">oradores</span></p>
-			<br />
-			<br />
-
-                         {% for speaker in speakers %}
-                             
-                             
-                             <div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper rounded"><img src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{ speaker.name }}" class="img-responsive"></div>
-					<h3 class="name">{{ speaker.name }}</h3>
-					<p class="text-alt"><small>{{ speaker.profession }}</small></p>
-					<p class="about">{{ speaker.presentation }}</p>
-					<ul class="speaker-socials">
-						{#<li><a href="{{ speaker.facebook }}"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="{{ speaker.twitter }}"><span class="fa fa-twitter"></span></a></li>#}
-                                                <li><a target="_blank" href="{{ speaker.linkedin }}"><span class="fa fa-linkedin"></span></a></li>
-					</ul>
-				</div>
-			</div>
-                             
-                             
-                             
-                             
-                             
-           
+<section id="speakers" class="section align-center">
+    <div class="container">
+        <i class="fa fa-microphone fa-3x"></i>
+        
+        
+        {#<span class="icon section-icon icon-faces-users-04"></span>#}
+        <h3>Oradores</h3>
+        <p class="text-alt">Conhece os <span class="highlight">oradores</span></p>
+        <br />
+        <br />
+        
+        Brevemente.
+        
+        
+{#
+        {% for speaker in speakers %}
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper rounded"><img src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{ speaker.name }}" class="img-responsive"></div>
+                    <h3 class="name">{{ speaker.name }}</h3>
+                    <p class="text-alt"><small>{{ speaker.profession }}</small></p>
+                    <p class="about">{{ speaker.presentation }}</p>
+                    <ul class="speaker-socials">
+                        
+                        <li><a target="_blank" href="{{ speaker.linkedin }}"><span class="fa fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+            </div>
         {% endfor %}
-                        
-                        
-                        
-                        
-                        
-			{#<div class="col-sm-4">
-				<div class="speaker">
-					<div class="photo-wrapper rounded"><img src="assets/img/speakers/speaker1.jpg" alt="John Doe" class="img-responsive"></div>
-					<h3 class="name">ERIC BOLDY</h3>
-					<p class="text-alt"><small>Project Manager</small></p>
-					<p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<ul class="speaker-socials">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-					</ul>
-				</div>
-			</div>#}
 
-			
+#}
 
-		</div>
-	</section>
+
+
+        {#<div class="col-sm-4">
+                <div class="speaker">
+                        <div class="photo-wrapper rounded"><img src="assets/img/speakers/speaker1.jpg" alt="John Doe" class="img-responsive"></div>
+                        <h3 class="name">ERIC BOLDY</h3>
+                        <p class="text-alt"><small>Project Manager</small></p>
+                        <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <ul class="speaker-socials">
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                        </ul>
+                </div>
+        </div>#}
+
+
+
+    </div>
+</section>
