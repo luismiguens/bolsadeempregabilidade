@@ -15,7 +15,7 @@
             <div class="col-sm-3">
                 <div class="speaker">
                     <div class="photo-wrapper">
-                        <img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" />
+                        <a target="_blank" href="{{ business.website }}"> <img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" /></a>
                     </div>
                     <h3 class="name">{{ business.name }}</h3>
                     <p class="text-alt"><small>{{ business.website }}</small></p>
