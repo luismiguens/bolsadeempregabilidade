@@ -11,12 +11,12 @@
         <br />
         <br />
         
-        Estamos a preparar o melhor painel de oradores para ti.
+        {#Estamos a preparar o melhor painel de oradores para ti.#}
         
         
-{#
+
         {% for speaker in speakers %}
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="speaker">
                     <div class="photo-wrapper rounded"><img src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{ speaker.name }}" class="img-responsive"></div>
                     <h3 class="name">{{ speaker.name }}</h3>
@@ -30,7 +30,7 @@
             </div>
         {% endfor %}
 
-#}
+
 
 
 
