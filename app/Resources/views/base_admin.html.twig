@@ -1,32 +1,166 @@
+
 <!doctype html>
 <html lang="en">
-    <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-        <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <title>Home</title>
+    <title>Dashboard Template for Bootstrap</title>
 
-        <meta name="description" content="PSD to HTML5+CSS3 conversion.">
-        <meta name="keywords" content="PSD, HTML5, CSS3">
-        <meta name="author" content="Vivaco">
-
-        <link rel="shortcut icon" href="">
-        <link rel="apple-touch-icon" href="">
-        <link rel="apple-touch-icon" sizes="72x72" href="">
-        <link rel="apple-touch-icon" sizes="114x114" href="">
-        {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/custom-animations.css') }}" />
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/style.css') }}" />
+    
+{% block stylesheets %}
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/bootstrap.min.css') }}" />
+    
+    <!-- Custom styles for this template -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/dashboard.css') }}" />
+            
         {% endblock %}
 
+  </head>
 
-        <!--[if lt IE 9]>
-                <script src="{{ asset('bundles/app/assets/js/html5shiv.js') }}"></script>
-                <script src="{{ asset('bundles/app/assets/js/respond.min.js') }}"></script>
-        <![endif]-->
+  <body>
+   {# <nav class="navbar fixed-top flex-md-nowrap p-0 shadow navbar-dark" >
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>
+     
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>#}
+    
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>
+      {#<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">#}
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+    
+    
+    
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+             
+              
+              
+                
+                <li class="nav-item">
+                <a class="nav-link" href="{{ path('admin_business_index') }}">
+                  <span data-feather="globe"></span>
+                  Empresas 
+                </a>
+              </li>
+              
+              
+              <li class="nav-item">
+                <a class="nav-link " href="{{ path('admin_speaker_index') }}">
+                  <span data-feather="mic"></span>
+                  Oradores 
+                </a>
+              </li>
+                
+              
+              <li class="nav-item">
+                <a class="nav-link " href="{{ path('admin_photo_index') }}">
+                  <span data-feather="image"></span>
+                  Galeria 
+                </a>
+              </li>
+                
+              
+              <li class="nav-item">
+                <a class="nav-link " href="{{ path('admin_sponsor_index') }}">
+                  <span data-feather="dollar-sign"></span>
+                  Patrocinadores 
+                </a>
+              </li>
+              
+              
+              <li class="nav-item">
+                <a class="nav-link " href="{{ path('admin_fos_user_index') }}">
+                  <span data-feather="user"></span>
+                  Participantes 
+                </a>
+              </li>
+          
+            </ul>
+
+            
+          
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+            {#<div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Share</button>
+                <button class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="calendar"></span>
+                This week
+              </button>
+            </div>#}
+          </div>
+
+          {#<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>#}
+
+          {#<h2>Section title</h2>#}
+         {# <div class="table-responsive">#}
+            
+              
+              {% block body %}
+
+
+        {% endblock %}
+              
+              
+              
+          {#</div>#}
+        </main>
+      </div>
+    </div>
+
+  
+
+    
+
+    
+    {% block javascripts %}
+
+        
+         <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="{{ asset('bundles/app/assets/js/dashboard/jquery-slim.min.js') }}"><\/script>')</script>
+    <script src="{{ asset('bundles/app/assets/js/dashboard/popper.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/assets/js/dashboard/bootstrap.min.js') }}"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
         
         
+            
+    
+     
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
 <script>
@@ -36,77 +170,38 @@
 
   gtag('config', 'UA-114385271-1');
 </script>
-
-        
-    </head>
-
-    <body>
-        {#<div class="preloader-mask">
-            <div class="preloader"></div>
-        </div>#}
-
-
-        
-        {% include 'AppBundle:default:_header.html.twig'   with {'selected_menu': 'homepage'} %}
-        
-        <!-- begin page -->
-        
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    {#<li class="active"><a href="#">Overview</a></li>#}
-                    <li><a href="{{ path('admin_business_index') }}">Empresas</a></li>
-                    <li><a href="{{ path('admin_speaker_index') }}">Oradores</a></li>
-                    <li><a href="{{ path('admin_photo_index') }}">Galeria</a></li>
-                    <li><a href="{{ path('admin_sponsor_index') }}">Patrocinadores</a></li>
-                </ul>
-                
-            </div>
-            <div class="col-sm-9 col-md-10  main">
-        {% block body %}
-
-
+    
+    
+    
         {% endblock %}
-          
-
-
-            </div>
-        </div>
-    </div>
-<!-- end page -->
-
-        <div class="modal-window" data-modal="0" style="background-color: rgba(2, 2, 2, 0.85);">
-            <div class="modal-box iframe-box iframe-video">
-                <span class="close-btn icon icon-office-52"></span>
-
-                <iframe src="https://www.youtube.com/embed/goH-Pv1w6xo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-
-
-        {% block javascripts %}
-
-            <!--[if lt IE 9]>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-1.11.3.min.js?ver=1') }}"></script>
-            <![endif]-->
-            <!--[if (gte IE 9) | (!IE)]><!-->
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-2.1.4.min.js?ver=1') }}"></script>
-            <!--<![endif]-->
-
-            <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/bootstrap.min.js') }}"></script>
-            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.validate.min.js') }}"></script>#}
-            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/toastr.min.js') }}"></script>#}
-            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.waypoints.min.js') }}"></script>#}
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.appear.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.plugin.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.countTo.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/masonry.pkgd.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/modal-box.js') }}"></script>
-            {#<script type="text/javascript" src="{{ asset('bundles/app/assets/js/ventcamp.js') }}"></script>#}
-
-        {% endblock %}
-    </body>
+    
+    
+   
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

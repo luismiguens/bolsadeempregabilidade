@@ -13,10 +13,31 @@ app_admin_photo:
 app_admin_sponsor:
     resource: "@AppBundle/Resources/config/routing/sponsor.yml"
     prefix:   /admin_sponsor
+    
+    
+app_admin_fos_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /admin_fos_user
+
+
+#homepage:
+#    path:      /
+#    defaults:  { _controller: "AppBundle:Default:index" }
+#    
+#homepage_year:
+#    path:      /{year}
+#    defaults:  { _controller: "AppBundle:Default:index" }
+
 
 homepage:
-    path:      /
-    defaults:  { _controller: "AppBundle:Default:index" }
+    path:      /{_locale}/{year}
+    defaults:  { _controller: AppBundle:Default:index, _locale: pt, year: 2018 }
+    requirements:
+        year:  2018|2019
+        _locale:  en|pt
+        
+        
+        
 
 
 comming_soon:

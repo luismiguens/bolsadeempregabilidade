@@ -3,6 +3,13 @@
 {% block body %}
     <h1>Speakers list</h1>
 
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_speaker_new') }}">Create a new speaker</a>
+        </li>
+    </ul>
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
@@ -10,44 +17,49 @@
                 <th>Name</th>
                 <th>Image</th>
                 <th>Profession</th>
-                <th>Presentation</th>
+                    {#<th>Presentation</th>#}
                 <th>Linkedin</th>
-{#                <th>Twitter</th>
-                <th>Google</th>#}
-                
+                    {#                <th>Twitter</th>
+                                    <th>Google</th>#}
+
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for speaker in speakers %}
-            <tr>
-                 <td>{{ speaker.id }}</td>
-                <td>{{ speaker.name }}</td>
-                <td><img src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{speaker.image }}" /></td>
-                <td>{{ speaker.profession }}</td>
-                <td>{{ speaker.presentation }}</td>
-                <td>{{ speaker.linkedin }}</td>
-{#                <td>{{ speaker.twitter }}</td>
-                <td>{{ speaker.google }}</td>#}
-               
-                <td>
-                    <ul>
-                        {#<li>
-                            <a href="{{ path('admin_speaker_show', { 'id': speaker.id }) }}">show</a>
-                        </li>#}
-                        <li>
-                            <a href="{{ path('admin_speaker_edit', { 'id': speaker.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
+            {% for speaker in speakers %}
+                <tr>
+                    <td>{{ speaker.id }}</td>
+                    <td>{{ speaker.name }}</td>
+                    <td><img style="width: 100px" src="{{ vich_uploader_asset(speaker, 'imageFile') }}" alt="{{speaker.image }}" /></td>
+                    <td>{{ speaker.profession }}</td>
+                    {#<td>{{ speaker.presentation }}</td>#}
+                    <td>{{ speaker.linkedin }}</td>
+                    {#                <td>{{ speaker.twitter }}</td>
+                                    <td>{{ speaker.google }}</td>#}
+
+                    <td>
+                        <ul   class="list-inline">
+                            {#<li>
+                                <a href="{{ path('admin_speaker_show', { 'id': speaker.id }) }}">show</a>
+                            </li>#}
+                            <li  class="list-inline-item">
+                                <a class="btn btn-outline-primary" href="{{ path('admin_speaker_edit', { 'id': speaker.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_speaker_new') }}">Create a new speaker</a>
+
+
+
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_speaker_new') }}">Create a new speaker</a>
         </li>
     </ul>
+
 {% endblock %}

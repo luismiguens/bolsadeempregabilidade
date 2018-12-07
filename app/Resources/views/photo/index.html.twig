@@ -3,47 +3,60 @@
 {% block body %}
     <h1>Photos list</h1>
 
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_photo_new') }}">Create a new photo</a>
+        </li>
+    </ul>
+
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Image</th>
-                {#<th>Createdat</th>#}
-                <th>Updatedat</th>
-                
+                    {#<th>Createdat</th>#}
+                    {# <th>Updatedat</th>#}
+
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for photo in photos %}
-            <tr>
-                <td>{{ photo.id }}</td>
-                <td>{{ photo.name }}</td>
-                <td><img src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="{{photo.image }}" /></td>
-                {#<td>{{ photo.createdAt }}</td>#}
-                <td>{% if photo.updatedAt %}{{ photo.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                
-                <td>
-                    <ul>
-                        {#<li>
-                            <a href="{{ path('admin_photo_show', { 'id': photo.id }) }}">show</a>
-                        </li>#}
-                        <li>
-                            <a href="{{ path('admin_photo_edit', { 'id': photo.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
+            {% for photo in photos %}
+                <tr>
+                    <td>{{ photo.id }}</td>
+                    <td>{{ photo.name }}</td>
+                    <td><img style="width: 100px" src="{{ vich_uploader_asset(photo, 'imageFile') }}" alt="{{photo.image }}" /></td>
+                        {#<td>{{ photo.createdAt }}</td>#}
+                        {#<td>{% if photo.updatedAt %}{{ photo.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+
+                    <td>
+                        <ul  class="list-inline">
+                            {#<li>
+                                <a href="{{ path('admin_photo_show', { 'id': photo.id }) }}">show</a>
+                            </li>#}
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-primary" href="{{ path('admin_photo_edit', { 'id': photo.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_photo_new') }}">Create a new photo</a>
+
+
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_photo_new') }}">Create a new photo</a>
         </li>
     </ul>
+
+
 {% endblock %}
 
 

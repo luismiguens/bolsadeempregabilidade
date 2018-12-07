@@ -1,95 +1,98 @@
 {# empty Twig template #}
 <section class="footer">
-		<div class="container">
+    <div class="container">
+        <div class="col-md-4">
+            <div class="widget about-widget">
+                <h6 class="widget-head">{% trans %}Sobre o{% endtrans %} <span class="highlight">{% trans %}Fórum Turismo{% endtrans %}</span></h6>
+                <p class="text-alt">
+                    <small>
+                        {% trans %}A Associação Fórum Turismo, tem vindo a apoiar a empregabilidade no sector do Turismo, trabalhando de perto na aproximação entre os futuros profissionais e os líderes atuais do sector.
+                        São mais de 4 anos que trabalhamos com o propósito de unir pessoas fortalecendo o Turismo.{% endtrans %}
+                    </small>
+                </p>
+                <a target="_blank" href="http://www.forumturismo21.org/">
+                    <img src="{{ asset('bundles/app/assets/img/autograph-143x105.png') }}" alt="autograph">
+                </a>
+            </div>
+        </div>
 
-			<div class="col-md-4">
-				<div class="widget about-widget">
-					<h6 class="widget-head">Sobre o <span class="highlight">Fórum Turismo</span></h6>
-					<p class="text-alt"><small>A Associação Fórum Turismo, tem vindo a apoiar a empregabilidade no sector do Turismo, trabalhando de perto na aproximação entre os futuros profissionais e os líderes atuais do sector.
-São mais de 4 anos que trabalhamos com o propósito de unir pessoas fortalecendo o Turismo.</small></p>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+            <div class="widget twitter-widget">
+                <h6 class="widget-head"><span class="fa fa-twitter"></span> Facebook feed</h6>
 
-                                        <a target="_blank" href="http://www.forumturismo21.org/">
-                                        <img src="{{ asset('bundles/app/assets/img/autograph-143x105.png') }}" alt="autograph">
-                                        </a>
-                                        
-                                        
-				</div>
-			</div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fforumturismo21&tabs=timeline&width=253&height=483&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=293963754141033" width="253" height="483" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-			<div class="col-md-4 col-lg-3 col-lg-offset-1">
-				<div class="widget twitter-widget">
-					<h6 class="widget-head"><span class="fa fa-twitter"></span> Facebook feed</h6>
-                                        
-                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fforumturismo21&tabs=timeline&width=253&height=483&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=293963754141033" width="253" height="483" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                                        
-                                      {#  <a class="twitter-timeline" data-lang="pt" data-width="255" data-height="292" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a> 
-                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                                        #}
+                {#  <a class="twitter-timeline" data-lang="pt" data-width="255" data-height="292" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a> 
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  #}
 
-					{#<ul class="tweets-list">
-						<li class="tweet">
-							<p class="text-alt tweet-text">Grabehan <a href="#">#NowPlaying</a> Future People by Alabama Shakes <a href="http://spoti.fi/1CTPWcW">http://spoti.fi/1CTPWcW</a></p>
-							<small class="tweet-date">7 sep 2015</small>
-						</li>
+                {#<ul class="tweets-list">
+                        <li class="tweet">
+                                <p class="text-alt tweet-text">Grabehan <a href="#">#NowPlaying</a> Future People by Alabama Shakes <a href="http://spoti.fi/1CTPWcW">http://spoti.fi/1CTPWcW</a></p>
+                                <small class="tweet-date">7 sep 2015</small>
+                        </li>
 
-						<li class="tweet">
-							<p class="text-alt tweet-text">Loving <a href="#">@TryGhost</a> so far. Ghost theming here I come!</p>
-							<small class="tweet-date">8 sep 2015</small>
-						</li>
+                        <li class="tweet">
+                                <p class="text-alt tweet-text">Loving <a href="#">@TryGhost</a> so far. Ghost theming here I come!</p>
+                                <small class="tweet-date">8 sep 2015</small>
+                        </li>
 
-						<li class="tweet">
-							<p class="text-alt tweet-text">We didn't set out to be superheroes. But sometimes, life doesn't go the way you planned. <a href="#">#TI5</a> <a href="#">#BleedBlue</a></p>
-							<small class="tweet-date">9 sep 2015</small>
-						</li>
-					</ul>#}
-				</div>
-			</div>
+                        <li class="tweet">
+                                <p class="text-alt tweet-text">We didn't set out to be superheroes. But sometimes, life doesn't go the way you planned. <a href="#">#TI5</a> <a href="#">#BleedBlue</a></p>
+                                <small class="tweet-date">9 sep 2015</small>
+                        </li>
+                </ul>#}
+            </div>
+        </div>
 
-			<div class="col-md-4 col-lg-3 col-lg-offset-1">
-				<div class="widget instagram-widget">
-					<h6 class="widget-head"><span class="fa fa-instagram"></span> Instagram feed</h6>
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BfYZuKqBilv/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.125% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BfYZuKqBilv/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">O @lisbonmarriott vai estar “à procura de talentos” na Bolsa de Empregabilidade! Nos dias 2 e 3 de marco, vais poder “abraçar o mundo Marriott” Sabe mais em: www.bolsadeempregabilidade.pt (link na bio)</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/forumturismo/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Fórum Turismo</a> (@forumturismo) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-19T14:18:23+00:00">Feb 19, 2018 at 6:18am PST</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+        <div class="col-md-4 col-lg-3 col-lg-offset-1">
+            <div class="widget instagram-widget">
+                <h6 class="widget-head"><span class="fa fa-instagram"></span> Instagram feed</h6>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BfYZuKqBilv/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:28.125% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BfYZuKqBilv/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">O @lisbonmarriott vai estar “à procura de talentos” na Bolsa de Empregabilidade! Nos dias 2 e 3 de marco, vais poder “abraçar o mundo Marriott” Sabe mais em: www.bolsadeempregabilidade.pt (link na bio)</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/forumturismo/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Fórum Turismo</a> (@forumturismo) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-02-19T14:18:23+00:00">Feb 19, 2018 at 6:18am PST</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
 
-					{#<ul class="instagram-list">
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-						<li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
-					</ul>#}
-				</div>
-			</div>
+                {#<ul class="instagram-list">
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                        <li><img src="assets/img/gallery/footer-photo.jpg" alt="photo" /></li>
+                </ul>#}
+            </div>
+        </div>
 
-		</div>
+    </div>
 
-		{#<div class="footer-base">
-			<div class="container">
+    <div class="footer-base">
+            <div class="container">
 
-				<div class="col-md-6">
-					<ul class="footer-nav">
-						<li class="footer-nav-item"><a href="#">Contact</a></li>
-						<li class="footer-nav-item"><a href="#">Privacy policy</a></li>
-						<li class="footer-nav-item"><a href="#">Press</a></li>
-					</ul>
-				</div>
+                    <div class="col-md-6">
+                            <ul class="footer-nav">
+                                    <li class="footer-nav-item"><a href="{{ path('homepage', { '_locale': 'pt', 'year': year }) }}">Português</a></li> 
+                                    <li class="footer-nav-item"><a href="{{ path('homepage', { '_locale': 'en', 'year': year }) }}">English</a></li>
+                                    
+                            </ul>
+                    </div>
 
-				<div class="col-md-6 align-right">
-					<ul class="socials-nav align-right">
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-github"></span></a></li>
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-vimeo-square"></span></a></li>
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-google-plus"></span></a></li>
-						<li class="socials-nav-item"><a href="#"><span class="fa fa-instagram"></span></a></li>
-					</ul>
+                    <div class="col-md-6 align-right">
+                            <ul class="socials-nav align-right">
+                                <li class="socials-nav-item"><a href="https://www.linkedin.com/in/f%C3%B3rum-turismo-75a73a76/"><span class="fa fa-linkedin"></span></a></li>
+                                    {#<li class="socials-nav-item"><a href="#"><span class="fa fa-twitter"></span></a></li>#}
+                                    <li class="socials-nav-item"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    {#<li class="socials-nav-item"><a href="#"><span class="fa fa-github"></span></a></li>#}
+                                   {# <li class="socials-nav-item"><a href="#"><span class="fa fa-vimeo-square"></span></a></li>
+                                    <li class="socials-nav-item"><a href="#"><span class="fa fa-google-plus"></span></a></li>#}
+                                    <li class="socials-nav-item"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                    
+                                    
+                            </ul>
 
-					<p class="text-alt"><small>All Rights Reserved © 2015</small></p>
-				</div>
+                            <p class="text-alt"><small>All Rights Reserved © 2018</small></p>
+                    </div>
 
-			</div>
-		</div>#}
-	</section>
+            </div>
+    </div>
+</section>

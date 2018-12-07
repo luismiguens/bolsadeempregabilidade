@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Home</title>
+
+	<meta name="description" content="PSD to HTML5+CSS3 conversion.">
+	<meta name="keywords" content="PSD, HTML5, CSS3">
+	<meta name="author" content="Vivaco">
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/custom-animations.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/style.css') }}" />
+
+	<!--[if lt IE 9]>
+		<script src="{{ asset('bundles/app/assets/js/html5shiv.js') }}"></script>
+		<script src="{{ asset('bundles/app/assets/js/respond.min.js') }}"></script>
+	<![endif]-->
+
+
+
+    </head>
+    <body>
+        <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+
+        {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashBag.all %}
+                {% for message in messages %}
+                    <div class="{{ type }}">
+                        {{ message|trans({}, 'FOSUserBundle') }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+        
+        
+        
+        <!--[if lt IE 9]>
+		<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-1.11.3.min.js?ver=1') }}"></script>
+	<![endif]-->
+	<!--[if (gte IE 9) | (!IE)]><!-->
+		<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-2.1.4.min.js?ver=1') }}"></script>
+	<!--<![endif]-->
+
+	<script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.validate.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/assets/js/toastr.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/assets/js/ventcamp.js') }}"></script>
+        
+        
+    </body>
+</html>

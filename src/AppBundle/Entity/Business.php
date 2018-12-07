@@ -250,5 +250,50 @@ class Business
 
 
     
-}
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $years;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->years = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add year
+     *
+     * @param \AppBundle\Entity\Year $year
+     *
+     * @return Business
+     */
+    public function addYear(\AppBundle\Entity\Year $year)
+    {
+        $this->years[] = $year;
+
+        return $this;
+    }
+
+    /**
+     * Remove year
+     *
+     * @param \AppBundle\Entity\Year $year
+     */
+    public function removeYear(\AppBundle\Entity\Year $year)
+    {
+        $this->years->removeElement($year);
+    }
+
+    /**
+     * Get year
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getYears()
+    {
+        return $this->years;
+    }
+}

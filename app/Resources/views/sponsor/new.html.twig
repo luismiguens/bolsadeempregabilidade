@@ -1,16 +1,23 @@
 {% extends 'base_admin.html.twig' %}
 
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+
 {% block body %}
     <h1>Sponsor creation</h1>
 
+    <hr/>
+
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    {{ form_widget(form) }}
+    <input type="submit" class="btn btn-primary" value="Create" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_sponsor_index') }}">Back to the list</a>
+    <ul  class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-secondary" href="{{ path('admin_sponsor_index') }}">Back to the list</a>
         </li>
     </ul>
 {% endblock %}
+
+
+

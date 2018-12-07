@@ -14,22 +14,17 @@
         <option name="fixed"/>
       </options>
     </field>
-    <field name="createdAt" type="string" column="created_at" length="45" nullable="true">
-      <options>
-        <option name="fixed"/>
-      </options>
-    </field>
-    
-    
-    
-<!--    <field name="image" type="string" column="image" length="45" nullable="true">
-      <options>
-        <option name="fixed"/>
-      </options>
-    </field>-->
-        <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
-    
-    
-    
+    <field name="createdAt" type="datetime" column="created_at" nullable="true"/>
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
+    <many-to-many field="years" target-entity="Year" inversed-by="photos" fetch="LAZY">
+      <join-table name="photo_year">
+        <join-columns>
+          <join-column name="photo_id" referenced-column-name="id"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="year_id" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
   </entity>
 </doctrine-mapping>

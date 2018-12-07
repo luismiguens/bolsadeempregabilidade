@@ -1,64 +1,32 @@
 {% extends 'base.html.twig' %}
 
-
 {% block stylesheets %}
     {{ parent() }}
 {% endblock %}
 
-
 {% block body %}
-    
-    
-    
-     {% include 'AppBundle:default:_hero.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_header.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_about.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_counters.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_business.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_speakers.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_schedule.html.twig'   with {'selected_menu': 'homepage'} %}
-   
-     
-     {#{% include 'AppBundle:default:_signup.html.twig'   with {'selected_menu': 'homepage'} %}#}
+    {% include 'AppBundle:default:_hero_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_header_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_about_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_counters_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_business.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_speakers.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_schedule.html.twig'   with {'selected_menu': 'homepage'} %}
 
-     {% include 'AppBundle:default:_feedback.html.twig'   with {'selected_menu': 'homepage'} %}
-     {#{% include 'AppBundle:default:_register.html.twig'   with {'selected_menu': 'homepage'} %}#}
-     {% include 'AppBundle:default:_gallery.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_sponsors.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_contacts.html.twig'   with {'selected_menu': 'homepage'} %}
-     {% include 'AppBundle:default:_footer.html.twig'   with {'selected_menu': 'homepage'} %}
-     {#{% include 'AppBundle:default:_email-ticket.html.twig'   with {'selected_menu': 'homepage'} %}#}
-     
-     
-     
-     
-{#
-    {% include 'default/_hero.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}
-    {% include 'default/_.html.twig'%}#}
+    {#{% include 'AppBundle:default:_signup.html.twig'   with {'selected_menu': 'homepage'} %}#}
 
+    {% include 'AppBundle:default:_feedback_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+    {#{% include 'AppBundle:default:_register.html.twig'   with {'selected_menu': 'homepage'} %}#}
+    {% include 'AppBundle:default:_gallery.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_sponsors.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_contacts.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_footer.html.twig'   with {'selected_menu': 'homepage'} %}
+    {#{% include 'AppBundle:default:_email-ticket.html.twig'   with {'selected_menu': 'homepage'} %}#}
 {% endblock %}
 
 
 {% block javascripts %}
     {{ parent() }}
-    
-    
-    
-    
 {% endblock %}
 
 

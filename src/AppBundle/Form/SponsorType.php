@@ -16,7 +16,8 @@ class SponsorType extends AbstractType
     {
         $builder->add('name')
                 ->add('imageFile', VichImageType::class, ['required' => false, 'allow_delete' => true])
-                ->add('website');
+                ->add('website')
+                ->add('years');
 //                ->add('updatedAt');
     }
     

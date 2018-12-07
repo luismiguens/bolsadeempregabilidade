@@ -1,0 +1,92 @@
+{# empty Twig template #}
+
+<section id="about" class="section align-center">
+    <div class="container">
+        {#<span class="icon section-icon icon-multimedia-12"></span>#}
+        <i class="fa fa-comments fa-3x"></i>
+        <h3>{% trans from 'messages_2019' %}A Maior Feira de Emprego de Turismo em Portugal{% endtrans %} </h3>
+        <p class="text-alt"><span class="highlight">{% trans from 'messages_2019' %}Durante 2 dias,{% endtrans %}</span> {% trans from 'messages_2019' %}mais de 10.000 oportunidades de abraçares o mundo do trabalho{% endtrans %}
+        </p>
+        <br />
+        <br />
+
+        <div class="tabs-wrapper tabs-horizontal">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#horizontal_tab1" data-toggle="tab">
+                        <h6 class="heading-alt"><span class="fa fa-code"></span> {% trans from 'messages_2019' %}Informação geral{% endtrans %}</h6>
+                    </a>
+                </li>
+                <li>
+                    <a href="#horizontal_tab2" data-toggle="tab">
+                        <h6 class="heading-alt"><span class="fa fa-rocket"></span> {% trans from 'messages_2019' %}O que podes encontrar{% endtrans %}</h6>
+                    </a>
+                </li>
+                 <li>
+                     <a href="#horizontal_tab3" data-toggle="tab">
+                         <h6 class="heading-alt"><span class="fa fa-external-link"></span> {% trans from 'messages_2019' %}As nossas sugestões{% endtrans %}</h6>
+                     </a>
+                 </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="horizontal_tab1" class="tab-pane fade active in">
+                    <div class="col-sm-5 img-column">
+                        <img src="{{ asset('bundles/app/assets/img/img_about_2019.png') }}" alt="" class="img-responsive" />
+                        {#<img src="assets/img/imac-371x412.png" alt="" class="img-responsive" />#}
+                    </div>
+                    <div class="col-sm-7 align-left">
+                        <h6>{% trans from 'messages_2019' %}Acerca do evento{% endtrans %}</h6>
+                        <p>{% trans from 'messages_2019' %}A Bolsa de Empregabilidade é um evento onde vais encontrar a porta de entrada no mercado de trabalho. É o local de contacto entre employers e employees onde tu tens de estar.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}O Fórum Turismo promove, pelo terceiro ano consecutivo, a realização da Bolsa de Empregabilidade que visa promover a empregabilidade de jovens formados em Turismo ou profissionais em busca de novas oportunidades.{% endtrans %} </p>
+                        <p>{% trans from 'messages_2019' %}Depois de duas edições, onde mais de 60 empresas já participaram e disponibilizaram o total de 4800 ofertas de trabalho, estamos de volta para a maior edição de sempre da Bolsa de Empregabilidade.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Este ano, a acompanhar o sucesso do Turismo em Portugal, trazemos para ti mais de 60 empresas que no total têm mais de 10 mil ofertas de trabalho na BTL - Bolsa de Turismo de Lisboa.{% endtrans %} </p>
+                    </div>
+                </div>
+
+                <div id="horizontal_tab2" class="tab-pane fade">
+                    <div class="col-sm-5 img-column">
+                        {#<img src="assets/img/imac-371x412.png" alt="" class="img-responsive" />#}
+                        <img src="{{ asset('bundles/app/assets/img/imac-371x412.png') }}" alt="" class="img-responsive" />
+                    </div>
+                    
+                    <div class="col-sm-7 align-left">
+                        <h6>{% trans from 'messages_2019' %}O que podes encontrar{% endtrans %}</h6>
+                        <p>{% trans from 'messages_2019' %}60 empresas à procura de talento.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}+ de 10000 ofertas de emprego.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Área restrita para entrevistas no momento.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Área de conferências para partilha de conhecimentos.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Networking com​empresas e estudantes nacionais e internacionais.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Muitas oportunidades de alcançares o teu sonho.{% endtrans %}</p>
+                        
+                       
+                    </div>
+
+                    
+                </div>
+
+                 <div id="horizontal_tab3" class="tab-pane fade">
+                    <div class="col-sm-5 img-column">
+                        {#<img src="assets/img/imac-371x412.png" alt="" class="img-responsive" />#}
+                        <img src="{{ asset('bundles/app/assets/img/imac-371x412.png') }}" alt="" class="img-responsive" />
+                    </div>
+                    <div class="col-sm-7 align-left">
+                        <h6>{% trans from 'messages_2019' %}As nossas sugestões{% endtrans %}</h6>
+                        <p>{% trans from 'messages_2019' %}Faz o teu trabalho de casa e procura saber mais sobre quem está a contratar.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Atualiza e traz contigo muitos currículos.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Antecipa as possíveis perguntas que te possam fazer.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Não te acanhes e fala com as empresas nas quais gostarias de trabalhar.{% endtrans %}</p>
+                        <p>{% trans from 'messages_2019' %}Não te esqueças, não há uma segunda oportunidade para causar uma primeira boa impressão. Tem atenção ao dress code.{% endtrans %}</p>
+                        
+                        {#<ul>Números do Evento
+                            <li>10 000 ofertas de emprego.</li>
+                            <li>60 empresas</li>
+                            <li>2 dias de evento</li>
+                            <li>20 palestras</li>
+                        </ul>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

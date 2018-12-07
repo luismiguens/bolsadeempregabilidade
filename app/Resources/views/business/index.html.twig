@@ -4,16 +4,24 @@
 
     <h1>Businesses list</h1>
 
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Create a new business</a>
+        </li>
+    </ul>
+
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Logotipo</th>
-                <th>Presentation</th>
+                    {#<th>Presentation</th>#}
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Website</th>
+                    {#<th>Website</th>#}
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,19 +30,19 @@
                 <tr>
                     <td>{{ business.id }}</td>
                     <td>{{ business.name }}</td>
-                     <td><img src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{business.image }}" /> </td>
-                    <td>{{ business.presentation }}</td>
+                    <td><img style="width: 100px" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{business.image }}" /> </td>
+                        {#<td>{{ business.presentation }}</td>#}
                     <td>{{ business.email }}</td>
                     <td>{{ business.phone }}</td>
-                    <td>{{ business.website }}</td>
-                    
+                    {#<td>{{ business.website }}</td>#}
+
                     <td>
-                        <ul>
+                        <ul  class="list-inline">
                             {#<li>
                                 <a href="{{ path('admin_business_show', { 'id': business.id }) }}">show</a>
                             </li>#}
-                            <li>
-                                <a href="{{ path('admin_business_edit', { 'id': business.id }) }}">edit</a>
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-primary" href="{{ path('admin_business_edit', { 'id': business.id }) }}">edit</a>
                             </li>
                         </ul>
                     </td>
@@ -42,9 +50,9 @@
             {% endfor %}
         </tbody>
     </table>
-<ul>
-        <li>
-            <a href="{{ path('admin_business_new') }}">Create a new business</a>
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Create a new business</a>
         </li>
     </ul>
 {% endblock %}

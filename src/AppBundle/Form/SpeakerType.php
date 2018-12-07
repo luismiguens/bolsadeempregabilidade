@@ -20,7 +20,8 @@ class SpeakerType extends AbstractType
                 ->add('presentation')
 //                ->add('facebook')
 //                ->add('twitter')
-                ->add('linkedin');
+                ->add('linkedin')
+                ->add('years');
     }
     
     /**

@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Speaker
  */
-class Speaker
-{
+class Speaker {
+
     /**
      * @var string
      */
@@ -49,25 +49,16 @@ class Speaker
      * @var integer
      */
     private $id;
-
-    
-    
-      private $imageFile;
-
-    
+    private $imageFile;
     private $updatedAt;
 
-    
-    
-      function getUpdatedAt() {
+    function getUpdatedAt() {
         return $this->updatedAt;
     }
 
     function setUpdatedAt($updatedAt) {
         $this->updatedAt = $updatedAt;
     }
-
-        
 
     /**
      * Set name
@@ -76,8 +67,7 @@ class Speaker
      *
      * @return Speaker
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -88,8 +78,7 @@ class Speaker
      *
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -100,8 +89,7 @@ class Speaker
      *
      * @return Speaker
      */
-    public function setImage($image)
-    {
+    public function setImage($image) {
         $this->image = $image;
         // Only change the updated af if the file is really uploaded to avoid database updates.
         // This is needed when the file should be set when loading the entity.
@@ -117,8 +105,7 @@ class Speaker
      *
      * @return string
      */
-    public function getImage()
-    {
+    public function getImage() {
         return $this->image;
     }
 
@@ -129,8 +116,7 @@ class Speaker
      *
      * @return Speaker
      */
-    public function setProfession($profession)
-    {
+    public function setProfession($profession) {
         $this->profession = $profession;
 
         return $this;
@@ -141,8 +127,7 @@ class Speaker
      *
      * @return string
      */
-    public function getProfession()
-    {
+    public function getProfession() {
         return $this->profession;
     }
 
@@ -153,8 +138,7 @@ class Speaker
      *
      * @return Speaker
      */
-    public function setPresentation($presentation)
-    {
+    public function setPresentation($presentation) {
         $this->presentation = $presentation;
 
         return $this;
@@ -165,10 +149,10 @@ class Speaker
      *
      * @return string
      */
-    public function getPresentation()
-    {
+    public function getPresentation() {
         return $this->presentation;
     }
+
 //
 //    /**
 //     * Set facebook
@@ -247,15 +231,11 @@ class Speaker
      *
      * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    
-    
-    
-    
-     public function setImageFile(File $image = null) {
+
+    public function setImageFile(File $image = null) {
         $this->imageFile = $image;
 
         // VERY IMPORTANT:
@@ -270,10 +250,8 @@ class Speaker
     public function getImageFile() {
         return $this->imageFile;
     }
-    
-    
-    
-        public function getAbsolutePath() {
+
+    public function getAbsolutePath() {
         return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
@@ -301,8 +279,108 @@ class Speaker
         $this->linkedin = $linkedin;
     }
 
+    /**
+     * @var string
+     */
+    private $twitter;
 
-    
-    
+    /**
+     * @var string
+     */
+    private $google;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $years;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->years = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set twitter
+     *
+     * @param string $twitter
+     *
+     * @return Speaker
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set google
+     *
+     * @param string $google
+     *
+     * @return Speaker
+     */
+    public function setGoogle($google)
+    {
+        $this->google = $google;
+
+        return $this;
+    }
+
+    /**
+     * Get google
+     *
+     * @return string
+     */
+    public function getGoogle()
+    {
+        return $this->google;
+    }
+
+    /**
+     * Add year
+     *
+     * @param \AppBundle\Entity\Year $year
+     *
+     * @return Speaker
+     */
+    public function addYear(\AppBundle\Entity\Year $year)
+    {
+        $this->years[] = $year;
+
+        return $this;
+    }
+
+    /**
+     * Remove year
+     *
+     * @param \AppBundle\Entity\Year $year
+     */
+    public function removeYear(\AppBundle\Entity\Year $year)
+    {
+        $this->years->removeElement($year);
+    }
+
+    /**
+     * Get year
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getYears()
+    {
+        return $this->years;
+    }
 }
-

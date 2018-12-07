@@ -29,14 +29,21 @@
         <option name="fixed"/>
       </options>
     </field>
-    
-    
     <field name="image" type="string" column="image" length="128" nullable="true">
       <options>
         <option name="fixed"/>
       </options>
     </field>
-        <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
-    
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
+    <many-to-many field="years" target-entity="Year" inversed-by="business" fetch="LAZY">
+      <join-table name="business_year">
+        <join-columns>
+          <join-column name="business_id" referenced-column-name="id"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="year_id" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
   </entity>
 </doctrine-mapping>

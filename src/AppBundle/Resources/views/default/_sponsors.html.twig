@@ -1,28 +1,25 @@
 {# empty Twig template #}
 <section id="sponsors" class="section align-center">
-		<div class="container">
-			<span class="icon section-icon icon-documents-bookmarks-12"></span>
-			<h3>Patrocinadores</h3>
-			<p class="text-alt">empresas que <span class="highlight">suportam</span> o evento</p>
-			<br/>
-			<br/>
-
-			
-
-			<div class="sponsors">
-                            
-                            {% for key,sponsor in sponsors %}
-                            
-                                <div class="sponsor inline"><a targer="_blank" href="{{sponsor.website}}"><img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" /></a></div>
-				{#<div class="sponsor inline"><img src="assets/img/sponsors/sponsor2.png" alt=""></div>
-				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor3.png" alt=""></div>
-				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor4.png" alt=""></div>
-				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor5.png" alt=""></div>
-				<div class="sponsor inline"><img src="assets/img/sponsors/sponsor6.png" alt=""></div>
-                                #}
-                                 {% endfor %}
-			</div>
-			
-
-		</div>
-	</section>
+    <div class="container">
+        <span class="icon section-icon icon-documents-bookmarks-12"></span>
+        <h3>{% trans %}Patrocinadores{% endtrans %}</h3>
+        <p class="text-alt">{% trans %}empresas que{% endtrans %} <span class="highlight">{% trans %}suportam{% endtrans %}</span> {% trans %}o evento{% endtrans %}</p>
+        <br/>
+        <br/>
+        <div class="sponsors">
+            {% for key,sponsor in sponsors %}
+                <div class="sponsor inline">
+                    <a targer="_blank" href="{{sponsor.website}}">
+                        <img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
+                    </a>
+                </div>
+                {#<div class="sponsor inline"><img src="assets/img/sponsors/sponsor2.png" alt=""></div>
+                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor3.png" alt=""></div>
+                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor4.png" alt=""></div>
+                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor5.png" alt=""></div>
+                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor6.png" alt=""></div>
+                #}
+            {% endfor %}
+        </div>
+    </div>
+</section>

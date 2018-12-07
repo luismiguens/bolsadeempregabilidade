@@ -6925,8 +6925,12 @@ button[type="submit"] .loading {
 /* ----------------------------------------------------------------------------
     Theme styles
 ---------------------------------------------------------------------------- */
-.bg1 {
-  background-image: url("../img/backgrounds/bg1.jpg");
+.bg1_2018 {
+  background-image: url("../img/backgrounds/bg1_2018.jpg");
+}
+
+.bg1_2019 {
+  background-image: url("../img/backgrounds/bg1_2019.jpg");
 }
 .bg2 {
   background-image: url("../img/backgrounds/bg2.jpg");

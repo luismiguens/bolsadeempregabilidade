@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="pt" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="b199eda9ab28a189b31c9a878233df3e" resname="02 e 03 Março">
+        <source>02 e 03 Março</source>
+        <target>pt_2018__02 e 03 Março</target>
+      </trans-unit>
+      <trans-unit id="f5375095dff2ba30615b80de0a96ad40" resname="FIL, Lisboa">
+        <source>FIL, Lisboa</source>
+        <target>__FIL, Lisboa</target>
+      </trans-unit>
+      <trans-unit id="ed5df946c056584faf44fb94758de1ab" resname="Bolsa de Empregabilidade">
+        <source>Bolsa de Empregabilidade</source>
+        <target>__Bolsa de Empregabilidade</target>
+      </trans-unit>
+      <trans-unit id="1ffbc64a5c938d5b710cf7e45c51991c" resname="A Maior Feira de Emprego de Turismo em Portugal">
+        <source>A Maior Feira de Emprego de Turismo em Portugal</source>
+        <target>__A Maior Feira de Emprego de Turismo em Portugal</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

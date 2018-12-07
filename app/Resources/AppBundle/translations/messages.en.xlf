@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pt" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="dd96727edf6e27db5f3762740d1f5f02" resname="Oradores">
+        <source>Oradores</source>
+        <target>__Oradores</target>
+      </trans-unit>
+      <trans-unit id="7c0cdf3b0e766a107ff41460f7a662b5" resname="Conhece os">
+        <source>Conhece os</source>
+        <target>__Conhece os</target>
+      </trans-unit>
+      <trans-unit id="4d8e04680bab8f289272bc2fc276d6b3" resname="oradores">
+        <source>oradores</source>
+        <target>__oradores</target>
+      </trans-unit>
+      <trans-unit id="1ff4836232fc61ce5e155079aba8fd79" resname="Empresas Confirmadas">
+        <source>Empresas Confirmadas</source>
+        <target>__Empresas Confirmadas</target>
+      </trans-unit>
+      <trans-unit id="305fcbae7ad89df69fbb7ca2a5585e73" resname="Todas as empresas abaixo estão">
+        <source>Todas as empresas abaixo estão</source>
+        <target>__Todas as empresas abaixo estão</target>
+      </trans-unit>
+      <trans-unit id="bc90e3065d5fbea86b77b793278698b4" resname="a contratar">
+        <source>a contratar</source>
+        <target>__a contratar</target>
+      </trans-unit>
+      <trans-unit id="6eb2b4cd994564454797b4dd1a1c9f3d" resname="Sobre o">
+        <source>Sobre o</source>
+        <target>__Sobre o</target>
+      </trans-unit>
+      <trans-unit id="9139a0a8d26284ebce374d5a94c66b08" resname="Fórum Turismo">
+        <source>Fórum Turismo</source>
+        <target>__Fórum Turismo</target>
+      </trans-unit>
+      <trans-unit id="93cc3505762c6c95474ebbdb3a4da737" resname="A Associação Fórum Turismo, tem vindo a apoiar a empregabilidade no sector do Turismo, trabalhando de perto na aproximação entre os futuros profissionais e os líderes atuais do sector.&#10;                        São mais de 4 anos que trabalhamos com o propósito de unir pessoas fortalecendo o Turismo.">
+        <source>A Associação Fórum Turismo, tem vindo a apoiar a empregabilidade no sector do Turismo, trabalhando de perto na aproximação entre os futuros profissionais e os líderes atuais do sector.
+                        São mais de 4 anos que trabalhamos com o propósito de unir pessoas fortalecendo o Turismo.</source>
+        <target>__A Associação Fórum Turismo, tem vindo a apoiar a empregabilidade no sector do Turismo, trabalhando de perto na aproximação entre os futuros profissionais e os líderes atuais do sector.
+                        São mais de 4 anos que trabalhamos com o propósito de unir pessoas fortalecendo o Turismo.</target>
+      </trans-unit>
+      <trans-unit id="76e69f5c92e2630371019eaae18c3416" resname="Edições anteriores">
+        <source>Edições anteriores</source>
+        <target>__Edições anteriores</target>
+      </trans-unit>
+      <trans-unit id="d436991dc5e37c1d04c9a72dec2c9877" resname="vê o que fizemos">
+        <source>vê o que fizemos</source>
+        <target>__vê o que fizemos</target>
+      </trans-unit>
+      <trans-unit id="2d5a681c1808e8c87a9974d8a2841755" resname="anteriormente">
+        <source>anteriormente</source>
+        <target>__anteriormente</target>
+      </trans-unit>
+      <trans-unit id="92bea9f2d83947088731f2fed42455fb" resname="Patrocinadores">
+        <source>Patrocinadores</source>
+        <target>__Patrocinadores</target>
+      </trans-unit>
+      <trans-unit id="e941acb89344caa9cb848f2608ee0dd2" resname="empresas que">
+        <source>empresas que</source>
+        <target>__empresas que</target>
+      </trans-unit>
+      <trans-unit id="090dcdbb0b73a24d81abf961f165f7ad" resname="suportam">
+        <source>suportam</source>
+        <target>__suportam</target>
+      </trans-unit>
+      <trans-unit id="8a249bf834543d4e420dcd0a2bcf7916" resname="o evento">
+        <source>o evento</source>
+        <target>__o evento</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
