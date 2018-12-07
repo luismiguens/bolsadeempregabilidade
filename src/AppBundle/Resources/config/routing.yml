@@ -31,7 +31,7 @@ app_admin_fos_user:
 
 homepage:
     path:      /{_locale}/{year}
-    defaults:  { _controller: AppBundle:Default:index, _locale: pt, year: 2018 }
+    defaults:  { _controller: AppBundle:Default:index, _locale: pt, year: 2019 }
     requirements:
         year:  2018|2019
         _locale:  en|pt
