@@ -6962,10 +6962,16 @@ button[type="submit"] .loading {
     background-color: #282f43;
 	opacity: 0.85;
 }
+.bg1_2019.overlay:before {
+  background-color: #262627;
+  opacity: 0.7;
+}
+
 .bg5.overlay:before {
   background-color: #262627;
   opacity: 0.7;
 }
+
 .hero-section {
   z-index: 1;
   overflow: hidden;
