@@ -87,7 +87,7 @@ $jobs = $business->getJobs();
             $em->flush();
 
             $this->get('session')->getFlashBag()->add(
-                    'notice', 'Job criado com sucesso!'
+                    'notice', 'Oferta de Emprego criada com sucesso!'
             );
 
 
@@ -126,7 +126,7 @@ $jobs = $business->getJobs();
             $this->getDoctrine()->getManager()->flush();
 
             $this->get('session')->getFlashBag()->add(
-                    'notice', 'Job actualizado com sucesso!'
+                    'notice', 'Oferta de Emprego actualizada com sucesso!'
             );
 
             return $this->redirectToRoute('admin_job_edit', array('id' => $job->getId()));
