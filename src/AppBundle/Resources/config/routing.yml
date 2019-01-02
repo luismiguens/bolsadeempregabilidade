@@ -18,6 +18,12 @@ app_admin_sponsor:
 app_admin_fos_user:
     resource: "@AppBundle/Resources/config/routing/user.yml"
     prefix:   /admin_fos_user
+    
+    
+app_admin_job:
+    resource: "@AppBundle/Resources/config/routing/job.yml"
+    prefix:   /admin_job
+    
 
 
 #homepage:
@@ -35,9 +41,27 @@ homepage:
     requirements:
         year:  2018|2019
         _locale:  en|pt
+
+        
+after_login:
+    path:      /{_locale}/{year}
+    defaults:  { _controller: AppBundle:User:afterLogin, _locale: pt, year: 2019 }
+    requirements:
+        year:  2018|2019
+        _locale:  en|pt
+        
+                
         
         
+editUser:
+    path:      /{_locale}/{year}/{user}
+    defaults:  { _controller: AppBundle:Default:editUser, _locale: pt, year: 2019 }
+    requirements:
+        year:  2018|2019
+        _locale:  en|pt
         
+        
+                
 
 
 comming_soon:

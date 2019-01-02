@@ -1,0 +1,41 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block body %}
+    <h1>Ofertas de Emprego</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Area</th>
+                <th>Location</th>
+                <th>Openings</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+                <tr>
+                    <td><a href="{{ path('admin_job_show', { 'id': job.id }) }}">{{ job.title }}</a></td>
+                    <td>{{ job.description }}</td>
+                    <td>{{ job.area }}</td>
+                    <td>{{ job.location }}</td>
+                    <td>{{ job.openings }}</td>
+                    <td>
+                        <ul  class="list-inline">
+                            <li class="list-inline-item">
+                                <a  class="btn btn-outline-primary"  href="{{ path('admin_job_edit', { 'id': job.id }) }}">Editar Oferta</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_job_new') }}">Criar Oferta de Emprego</a>
+        </li>
+    </ul>
+{% endblock %}

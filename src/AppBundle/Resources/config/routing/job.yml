@@ -1,0 +1,53 @@
+admin_job_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Job:index" }
+    methods:  GET
+    
+admin_job_index_user:
+    path:     /index_user
+    defaults: { _controller: "AppBundle:Job:indexUser" }
+    methods:  GET
+
+admin_job_index_business:
+    path:     /index_business/{id}
+    defaults: { _controller: "AppBundle:Job:indexBusiness" }
+    methods:  GET
+
+
+
+admin_job_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Job:show" }
+    methods:  GET
+
+admin_job_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Job:new" }
+    methods:  [GET, POST]
+
+admin_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Job:edit" }
+    methods:  [GET, POST]
+
+admin_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Job:delete" }
+    methods:  DELETE
+
+
+admin_job_submit:
+    path:     /{id}/submit
+    defaults: { _controller: "AppBundle:Job:submit" }
+    methods:  [GET, POST]
+    
+    
+admin_job_create_submit:
+    path:     /{id}/create_submit
+    defaults: { _controller: "AppBundle:Job:createSubmit" }
+    methods:  POST
+    
+admin_job_delete_submit:
+    path:     /{id}/delete_submit
+    defaults: { _controller: "AppBundle:Job:deleteSubmit" }
+    methods:  POST

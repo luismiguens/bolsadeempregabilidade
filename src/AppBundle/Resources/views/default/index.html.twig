@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block body %}
+    
+    
+
+
+
+    
+    
     {% include 'AppBundle:default:_hero_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
     {% include 'AppBundle:default:_header_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
     {% include 'AppBundle:default:_about_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
@@ -22,6 +29,12 @@
     {% include 'AppBundle:default:_contacts.html.twig'   with {'selected_menu': 'homepage'} %}
     {% include 'AppBundle:default:_footer.html.twig'   with {'selected_menu': 'homepage'} %}
     {#{% include 'AppBundle:default:_email-ticket.html.twig'   with {'selected_menu': 'homepage'} %}#}
+    
+    
+    
+    {#{% include 'AppBundle:default:user_modal.html.twig'   with {'selected_menu': 'homepage'} %}#}
+    
+    
 {% endblock %}
 
 

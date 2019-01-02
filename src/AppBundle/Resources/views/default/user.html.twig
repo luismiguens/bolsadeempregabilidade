@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {#{% include 'AppBundle:default:_hero_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}#}
+    {% include 'AppBundle:default:_header_'~year~'.html.twig'   with {'selected_menu': 'homepage'} %}
+
+    
+    
+   <section class="section align-center">
+		<div class="container">
+			<h5 class="heading-alt">Custom address baloons + custom marker</h5>
+			<p class="text-alt">add as much as you need</p>
+			<br/>
+			<br/>
+		</div>
+
+		<div class="map" data-settings="map-settings3.json" style="height: 560px"></div>
+
+		<br/>
+		<br/>
+
+		<div class="container contacts-wrapper">
+			<div class="align-left contacts col-sm-4">
+				<h5 class="highlight">Location</h5>
+
+				<ul class="list">
+					<li><i class="fa fa-map-marker"></i>881 7th Ave New York, NY</li>
+					<li><i class="fa fa-envelope"></i>info@ventcamp.com</li>
+					<li><i class="fa fa-phone"></i>(518) 457-5181 10001</li>
+					<li><i class="fa fa-clock-o"></i>7:30 - 22:00</li>
+				</ul>
+			</div>
+
+			<div class="align-left col-sm-8">
+				<form action="" class="form form-mail-us">
+					<div class="col-sm-12">
+						<h5 class="highlight">Mail Us</h5>
+						<br/>
+					</div>
+
+					<div class="col-sm-6 col-md-5">
+						<fieldset>
+							<label for="name">Name</label>
+							<input id="name" name="name" type="text">
+						</fieldset>
+
+						<fieldset>
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email">
+						</fieldset>
+					</div>
+
+					<div class="col-sm-6 col-md-5">
+						<fieldset>
+							<label for="message">Message</label>
+							<textarea id="message" name="message"></textarea>
+						</fieldset>
+					</div>
+
+					<fieldset class="col-sm-12">
+						<input type="submit" class="btn btn-solid" value="Submit">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</section>
+    
+    
+    
+    {% include 'AppBundle:default:_contacts.html.twig'   with {'selected_menu': 'homepage'} %}
+    {% include 'AppBundle:default:_footer.html.twig'   with {'selected_menu': 'homepage'} %}
+    {#{% include 'AppBundle:default:_email-ticket.html.twig'   with {'selected_menu': 'homepage'} %}#}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+

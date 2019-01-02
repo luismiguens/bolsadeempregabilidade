@@ -2,4 +2,6 @@ AppBundle\Entity\Business:
     imageFile:
         mapping:           business_image
         filename_property: image
-
+    outdoorFile:
+        mapping:           business_outdoor
+        filename_property: outdoor

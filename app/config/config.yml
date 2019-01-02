@@ -103,7 +103,20 @@ vich_uploader:
             delete_on_update:   true
             delete_on_remove:   true
             namer:              vich_uploader.namer_uniqid   
-            
+        business_outdoor:
+            uri_prefix:         /uploads/business
+            upload_destination: %kernel.root_dir%/../web/uploads/business
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid  
+        curriculo_file:
+            uri_prefix:         /uploads/curriculo
+            upload_destination: %kernel.root_dir%/../web/uploads/curriculo
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid    
             
             
             

@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Business
  */
-class Business
-{
+class Business {
+
     /**
      * @var string
      */
@@ -39,16 +39,67 @@ class Business
      * @var integer
      */
     private $id;
-
-    
-        //nome da imagem
+    //nome da imagem
     private $image;
     private $imageFile;
+    
+        /**
+     * @var string
+     */
+    private $taxName;
 
+    /**
+     * @var string
+     */
+    private $address;
+
+    /**
+     * @var string
+     */
+    private $nif;
+
+    /**
+     * @var string
+     */
+    private $contact;
+
+    /**
+     * @var string
+     */
+    private $representatives;
+
+    /**
+     * @var string
+     */
+    private $outdoor;
+    private $outdoorFile;
+
+
+    private $users;
     
     private $updatedAt;
     
+        /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $years;
+
     
+    
+        /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $jobs;
+    
+    
+    
+    /**
+     * Constructor
+     */
+    public function __construct() {
+        $this->years = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     function getUpdatedAt() {
         return $this->updatedAt;
     }
@@ -57,7 +108,6 @@ class Business
         $this->updatedAt = $updatedAt;
     }
 
-        
     function getImage() {
         return $this->image;
     }
@@ -69,13 +119,11 @@ class Business
         if ($this->image instanceof UploadedFile) {
             $this->updatedAt = new \DateTime('now');
         }
-        
-        
-         return $this;
+
+
+        return $this;
     }
 
-        
-    
     /**
      * Set name
      *
@@ -83,8 +131,7 @@ class Business
      *
      * @return Business
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -95,8 +142,7 @@ class Business
      *
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -107,8 +153,7 @@ class Business
      *
      * @return Business
      */
-    public function setPresentation($presentation)
-    {
+    public function setPresentation($presentation) {
         $this->presentation = $presentation;
 
         return $this;
@@ -119,8 +164,7 @@ class Business
      *
      * @return string
      */
-    public function getPresentation()
-    {
+    public function getPresentation() {
         return $this->presentation;
     }
 
@@ -131,8 +175,7 @@ class Business
      *
      * @return Business
      */
-    public function setEmail($email)
-    {
+    public function setEmail($email) {
         $this->email = $email;
 
         return $this;
@@ -143,8 +186,7 @@ class Business
      *
      * @return string
      */
-    public function getEmail()
-    {
+    public function getEmail() {
         return $this->email;
     }
 
@@ -155,8 +197,7 @@ class Business
      *
      * @return Business
      */
-    public function setPhone($phone)
-    {
+    public function setPhone($phone) {
         $this->phone = $phone;
 
         return $this;
@@ -167,8 +208,7 @@ class Business
      *
      * @return string
      */
-    public function getPhone()
-    {
+    public function getPhone() {
         return $this->phone;
     }
 
@@ -179,8 +219,7 @@ class Business
      *
      * @return Business
      */
-    public function setWebsite($website)
-    {
+    public function setWebsite($website) {
         $this->website = $website;
 
         return $this;
@@ -191,8 +230,7 @@ class Business
      *
      * @return string
      */
-    public function getWebsite()
-    {
+    public function getWebsite() {
         return $this->website;
     }
 
@@ -201,15 +239,10 @@ class Business
      *
      * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    
-    
-    
-    
-    
+
     public function setImageFile(File $image = null) {
         $this->imageFile = $image;
 
@@ -225,10 +258,28 @@ class Business
     public function getImageFile() {
         return $this->imageFile;
     }
+
+    
+    
+     public function setOutdoorFile(File $outdoor = null) {
+        $this->outdoorFile = $outdoor;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($outdoor) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getOutdoorFile() {
+        return $this->outdoorFile;
+    }
     
     
     
-        public function getAbsolutePath() {
+    public function getAbsolutePath() {
         return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
@@ -249,19 +300,6 @@ class Business
     }
 
 
-    
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $years;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->years = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add year
@@ -270,8 +308,7 @@ class Business
      *
      * @return Business
      */
-    public function addYear(\AppBundle\Entity\Year $year)
-    {
+    public function addYear(\AppBundle\Entity\Year $year) {
         $this->years[] = $year;
 
         return $this;
@@ -282,8 +319,7 @@ class Business
      *
      * @param \AppBundle\Entity\Year $year
      */
-    public function removeYear(\AppBundle\Entity\Year $year)
-    {
+    public function removeYear(\AppBundle\Entity\Year $year) {
         $this->years->removeElement($year);
     }
 
@@ -292,8 +328,216 @@ class Business
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getYears()
-    {
+    public function getYears() {
         return $this->years;
     }
+
+
+    
+        /**
+     * Add user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Business
+     */
+    public function addUser(\AppBundle\Entity\User $user) {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \AppBundle\Entity\user $user
+     */
+    public function removeUser(\AppBundle\Entity\User $user) {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers() {
+        return $this->users;
+    }
+
+
+    
+    
+
+    /**
+     * Set taxName
+     *
+     * @param string $taxName
+     *
+     * @return Business
+     */
+    public function setTaxName($taxName) {
+        $this->taxName = $taxName;
+
+        return $this;
+    }
+
+    /**
+     * Get taxName
+     *
+     * @return string
+     */
+    public function getTaxName() {
+        return $this->taxName;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Business
+     */
+    public function setAddress($address) {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress() {
+        return $this->address;
+    }
+
+    /**
+     * Set nif
+     *
+     * @param string $nif
+     *
+     * @return Business
+     */
+    public function setNif($nif) {
+        $this->nif = $nif;
+
+        return $this;
+    }
+
+    /**
+     * Get nif
+     *
+     * @return string
+     */
+    public function getNif() {
+        return $this->nif;
+    }
+
+    /**
+     * Set contact
+     *
+     * @param string $contact
+     *
+     * @return Business
+     */
+    public function setContact($contact) {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Get contact
+     *
+     * @return string
+     */
+    public function getContact() {
+        return $this->contact;
+    }
+
+    /**
+     * Set representatives
+     *
+     * @param string $representatives
+     *
+     * @return Business
+     */
+    public function setRepresentatives($representatives) {
+        $this->representatives = $representatives;
+
+        return $this;
+    }
+
+    /**
+     * Get representatives
+     *
+     * @return string
+     */
+    public function getRepresentatives() {
+        return $this->representatives;
+    }
+
+    /**
+     * Set outdoor
+     *
+     * @param string $outdoor
+     *
+     * @return Business
+     */
+    public function setOutdoor($outdoor) {
+        $this->outdoor = $outdoor;
+
+        return $this;
+    }
+
+    /**
+     * Get outdoor
+     *
+     * @return string
+     */
+    public function getOutdoor() {
+        return $this->outdoor;
+    }
+
+
+    public function __toString() {
+        return $this->getName();
+    }
+    
+            /**
+     * Add job
+     *
+     * @param \AppBundle\Entity\Job $job
+     *
+     * @return Business
+     */
+    public function addJob(\AppBundle\Entity\Job $job) {
+        $this->jobs[] = $job;
+
+        return $this;
+    }
+
+    /**
+     * Remove job
+     *
+     * @param \AppBundle\Entity\job $job
+     */
+    public function removeJob(\AppBundle\Entity\Job $job) {
+        $this->jobs->removeElement($job);
+    }
+
+    /**
+     * Get job
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJobs() {
+        return $this->jobs;
+    }
+
+
+    
+
 }

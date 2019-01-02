@@ -1,0 +1,29 @@
+{% extends 'base_user.html.twig' %}
+
+{% block body %}
+
+    <h1>Lista de Empresas</h1>
+    <hr/>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Logótipo</th>
+                <th>Contacto</th>
+                <th>Email</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for business in businesses %}
+                <tr>
+                    <td>{{ business.name }}</td>
+                    <td><img style="width: 100px" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{business.image }}" /> </td>
+                    <td>{{ business.contact}}</td>
+                    <td>{{ business.email }}</td>
+                    <td>{{ business.phone }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

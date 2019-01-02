@@ -8,34 +8,43 @@
             <tr>
                 <th>Id</th>
                 <th>Username</th>
+                <th>Name</th>
+                <th>Phone</th>
+
                 <th>Email</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for user in users %}
-            <tr>
-                <td><a href="{{ path('admin_fos_user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
-                 <td>{{ user.username }}</td>
-                 <td>{{ user.email}}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('admin_fos_user_show', { 'id': user.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('admin_fos_user_edit', { 'id': user.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
+            {% for user in users %}
+                <tr>
+                    <td><a href="{{ path('admin_fos_user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.email}}</td>
+                    <td>
+                        <ul class="list-inline">
+                            {#                        <li>
+                                                        <a href="{{ path('admin_fos_user_show', { 'id': user.id }) }}">show</a>
+                                                    </li>#}
+                            <li class="list-inline-item">
+                                <a class="btn btn-outline-primary"  href="{{ path('admin_fos_user_edit', { 'id': user.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_fos_user_new') }}">Create a new user</a>
+
+
+
+    <ul class="list-inline">
+        <li  class="list-inline-item">
+            <a class="btn btn-primary" href="{{ path('admin_fos_user_new') }}">Create a new user</a>
         </li>
     </ul>
+
 {% endblock %}

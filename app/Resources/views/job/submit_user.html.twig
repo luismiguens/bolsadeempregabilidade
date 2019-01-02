@@ -1,0 +1,79 @@
+{% extends 'base_user.html.twig' %}
+
+{#{% form_theme create_submit_form delete_submit_form 'bootstrap_4_horizontal_layout.html.twig' %}#}
+
+{% block body %}
+    <h1>Candidatura a Oferta de Emprego</h1>
+
+    <hr/>
+    
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    <table class="table table-bordered table-striped">
+        <tbody>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ job.title }}</td>
+            </tr>
+            <tr>
+                <th>Descrição</th>
+                <td>{{ job.description }}</td>
+            </tr>
+            <tr>
+                <th>Área</th>
+                <td>{{ job.area }}</td>
+            </tr>
+            <tr>
+                <th>Localidade</th>
+                <td>{{ job.location }}</td>
+            </tr>
+            <tr>
+                <th>Nº de Ofertas</th>
+                <td>{{ job.openings }}</td>
+            </tr>
+            {#            <tr>
+                            <th>Createdat</th>
+                            <td>{% if job.createdAt %}{{ job.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ job.id }}</td>
+                        </tr>#}
+        </tbody>
+    </table>
+
+    <ul class="list-inline">
+       
+
+        {% if create_submit_form is defined %}
+            <li class="list-inline-item">
+                {{ form_start(create_submit_form) }}
+                <input class="btn btn-primary"  type="submit" value="Submeter Candidatura">
+                {{ form_end(create_submit_form) }}
+            </li>
+        {% endif %}
+
+
+
+        {% if delete_submit_form is defined %}
+            <li class="list-inline-item">
+                {{ form_start(delete_submit_form) }}
+                <input class="btn btn-danger"  type="submit" value="Cancelar Candidatura">
+                {{ form_end(delete_submit_form) }}
+            </li>
+        {% endif %}
+        
+        <br/><br/>
+         <li  class="list-inline-item">
+            <a class="btn btn-secondary" href="{{ path('admin_job_index_user') }}">Voltar a Lista de Ofertas</a>
+        </li>
+        
+    </ul>
+{% endblock %}
+
+
+

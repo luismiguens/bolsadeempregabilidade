@@ -9,6 +9,31 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="taxName" type="string" column="tax_name" length="80" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="address" type="string" column="address" length="80" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="nif" type="string" column="nif" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="contact" type="string" column="contact" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="representatives" type="string" column="representatives" length="80" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="presentation" type="text" column="presentation" length="65535" nullable="true">
       <options>
         <option name="fixed"/>
@@ -34,7 +59,14 @@
         <option name="fixed"/>
       </options>
     </field>
+    <field name="outdoor" type="string" column="outdoor" length="128" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
+    
+    
     <many-to-many field="years" target-entity="Year" inversed-by="business" fetch="LAZY">
       <join-table name="business_year">
         <join-columns>
@@ -45,5 +77,48 @@
         </inverse-join-columns>
       </join-table>
     </many-to-many>
+    
+    
+    <many-to-many field="users" target-entity="User" inversed-by="business" fetch="LAZY">
+      <join-table name="business_fos_user">
+        <join-columns>
+          <join-column name="business_id" referenced-column-name="id"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="fos_user_id" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+    
+    <one-to-many field="jobs" target-entity="Job" mapped-by="business" />
+    
+    
   </entity>
 </doctrine-mapping>
+
+<!--ALTER TABLE `bolsadeempregabilidade`.`business` 
+ADD COLUMN `tax_name` VARCHAR(80) NULL AFTER `name`,
+ADD COLUMN `address` VARCHAR(80) NULL AFTER `tax_name`,
+ADD COLUMN `nif` VARCHAR(45) NULL AFTER `address`,
+ADD COLUMN `contact` VARCHAR(45) NULL AFTER `nif`,
+ADD COLUMN `representatives` VARCHAR(80) NULL AFTER `contact`,
+ADD COLUMN `outdoor` VARCHAR(128) NULL AFTER `image`;
+
+
+
+CREATE TABLE `bolsadeempregabilidade`.`job` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(80) NULL,
+  `description` VARCHAR(200) NULL,
+  `area` VARCHAR(80) NULL,
+  `location` VARCHAR(80) NULL,
+  `openings` INT NULL,
+  PRIMARY KEY (`id`));
+
+
+ALTER TABLE `bolsadeempregabilidade`.`job` 
+ADD COLUMN `created_at` DATETIME NULL DEFAULT now() AFTER `openings`;
+
+
+-->
+  

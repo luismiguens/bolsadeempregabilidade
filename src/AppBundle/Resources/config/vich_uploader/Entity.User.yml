@@ -1,0 +1,5 @@
+AppBundle\Entity\User:
+    cvFile:
+        mapping:           curriculo_file
+        filename_property: cv
+

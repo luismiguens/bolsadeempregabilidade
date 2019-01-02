@@ -8,5 +8,62 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
+        
+        <field name="name" type="string" column="name" length="80" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    
+    <field name="phone" type="string" column="phone" length="80" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    
+    <field name="linkedin" type="string" column="linkedin" length="80" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    
+    <field name="cv" type="string" column="cv" length="80" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+      
+      
+      
+      
+    </field>
+        
+        
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
+    
+    
+    
+    
+    
+        <many-to-many field="business" target-entity="Business" mapped-by="users" fetch="LAZY"/>
+        
+        <many-to-many field="jobs" target-entity="Job" mapped-by="users" fetch="LAZY"/>
+        
+        
     </entity>
 </doctrine-mapping>
+
+
+<!--ALTER TABLE `bolsadeempregabilidade`.`fos_user` 
+ADD COLUMN `name` VARCHAR(80) NULL AFTER `roles`,
+ADD COLUMN `phone` VARCHAR(45) NULL AFTER `name`,
+ADD COLUMN `linkedin` VARCHAR(80) NULL AFTER `phone`,
+ADD COLUMN `cv` VARCHAR(80) NULL AFTER `linkedin`;-->
+
+
+
+<!--ALTER TABLE `bolsadeempregabilidade`.`fos_user` 
+ADD COLUMN `updatedAt` DATETIME NULL DEFAULT now() AFTER `cv`;-->
+
+
+<!--ALTER TABLE `bolsadeempregabilidade`.`fos_user` 
+CHANGE COLUMN `updatedAt` `updated_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP ;-->

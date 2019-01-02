@@ -41,8 +41,12 @@ class UserController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
+            
+             $this->get('session')->getFlashBag()->add(
+                    'notice', 'User criado com sucesso!'
+            );
 
-            return $this->redirectToRoute('admin_fos_user_show', array('id' => $user->getId()));
+            return $this->redirectToRoute('admin_fos_user_edit', array('id' => $user->getId()));
         }
 
         return $this->render('user/new.html.twig', array(
@@ -77,6 +81,10 @@ class UserController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            
+             $this->get('session')->getFlashBag()->add(
+                    'notice', 'Os seus dados de utilizador foram actualizados com sucesso!'
+            );
 
             return $this->redirectToRoute('admin_fos_user_edit', array('id' => $user->getId()));
         }
@@ -88,6 +96,20 @@ class UserController extends Controller
         ));
     }
 
+     
+    public function afterLoginAction(Request $request, UserInterface $user)
+    {
+        
+        return $this->editAction($request, $user);
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     /**
      * Deletes a user entity.
      *

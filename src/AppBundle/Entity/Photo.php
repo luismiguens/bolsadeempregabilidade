@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Photo
  */
-class Photo
-{
+class Photo {
+
     /**
      * @var string
      */
@@ -29,16 +29,10 @@ class Photo
      * @var integer
      */
     private $id;
-
-    
-       private $imageFile;
-
-    
+    private $imageFile;
     private $updatedAt;
 
-    
-    
-      function getUpdatedAt() {
+    function getUpdatedAt() {
         return $this->updatedAt;
     }
 
@@ -46,9 +40,6 @@ class Photo
         $this->updatedAt = $updatedAt;
     }
 
-        
- 
-    
     /**
      * Set name
      *
@@ -56,8 +47,7 @@ class Photo
      *
      * @return Photo
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -68,8 +58,7 @@ class Photo
      *
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -80,8 +69,7 @@ class Photo
      *
      * @return Photo
      */
-    public function setImage($image)
-    {
+    public function setImage($image) {
         $this->image = $image;
         // Only change the updated af if the file is really uploaded to avoid database updates.
         // This is needed when the file should be set when loading the entity.
@@ -97,8 +85,7 @@ class Photo
      *
      * @return string
      */
-    public function getImage()
-    {
+    public function getImage() {
         return $this->image;
     }
 
@@ -109,8 +96,7 @@ class Photo
      *
      * @return Photo
      */
-    public function setCreatedAt($createdAt)
-    {
+    public function setCreatedAt($createdAt) {
         $this->createdAt = $createdAt;
 
         return $this;
@@ -121,8 +107,7 @@ class Photo
      *
      * @return string
      */
-    public function getCreatedAt()
-    {
+    public function getCreatedAt() {
         return $this->createdAt;
     }
 
@@ -131,14 +116,11 @@ class Photo
      *
      * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    
-    
-    
-     public function setImageFile(File $image = null) {
+
+    public function setImageFile(File $image = null) {
         $this->imageFile = $image;
 
         // VERY IMPORTANT:
@@ -153,10 +135,8 @@ class Photo
     public function getImageFile() {
         return $this->imageFile;
     }
-    
-    
-    
-        public function getAbsolutePath() {
+
+    public function getAbsolutePath() {
         return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
@@ -176,7 +156,6 @@ class Photo
         return 'uploads/photo';
     }
 
-
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
@@ -185,8 +164,7 @@ class Photo
     /**
      * Constructor
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->years = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -197,8 +175,7 @@ class Photo
      *
      * @return Photo
      */
-    public function addYear(\AppBundle\Entity\Year $year)
-    {
+    public function addYear(\AppBundle\Entity\Year $year) {
         $this->years[] = $year;
 
         return $this;
@@ -209,8 +186,7 @@ class Photo
      *
      * @param \AppBundle\Entity\Year $year
      */
-    public function removeYear(\AppBundle\Entity\Year $year)
-    {
+    public function removeYear(\AppBundle\Entity\Year $year) {
         $this->years->removeElement($year);
     }
 
@@ -219,8 +195,8 @@ class Photo
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getYears()
-    {
+    public function getYears() {
         return $this->years;
     }
+
 }

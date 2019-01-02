@@ -6,11 +6,11 @@
 {% block form_errors %}
     {% spaceless %}
         {% if errors is defined and errors|length > 0 %}
-        <ul>
-            {% for error in errors %}
-                <li style="color: red;">{{ error.message }}</li>
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for error in errors %}
+                    <li style="color: red;">{{ error.message }}</li>
+                    {% endfor %}
+            </ul>
         {% endif %}
     {% endspaceless %}
 {% endblock form_errors %}
@@ -21,11 +21,11 @@
     <div class="preloader"></div>
 </div>
 
-<section class="section bg-cover bg1 window-height">
+<section class="section bg-cover bg1_2019 window-height">
 
     <div class="container light-text align-center">
-        <h3><span class="highlight">Sign up</span> for event now!</h3>
-        <p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>
+        <h3><span class="highlight">Regista-te</span> Um mundo de oportunidades!</h3>
+        {#<p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>#}
         <br/>
         <br/>
     </div>
@@ -33,7 +33,7 @@
         {#<form class="form registration-form align-center">#}
         {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}
 
-        <h5><span class="highlight">Event Registration</span></h5>
+        <h5><span class="highlight">Registo no evento</span></h5>
 
         <fieldset class="col-sm-12">
             {{ form_label(form.email) }}
@@ -82,18 +82,39 @@
                                                         <option value="m">Variant M</option>
                                                 </select>
                                         </fieldset>
+        #}
+
+
+
+        {#        <fieldset class="col-sm-12">
+                    <input id="privacy" name="privacy" type="checkbox"><label for="privacy">I read & agree with <a href="#">Terms of service</a> </label>
+                    <br />
+                    <br />
+                </fieldset>
+        #}
+
+
         
-                                        <fieldset class="col-sm-12">
-                                                <input id="privacy" name="privacy" type="checkbox"><label for="privacy">I read & agree with <a href="#">Terms of service</a> </label>
-                                                <br />
-                                                <br />
-                                        </fieldset>#}
+
 
 
         {{ form_widget(form) }}
-        <hr>
+        
         <input type="submit" value="submit" class="btn">
+        
+        
+        <hr/>
+         <fieldset class="col-sm-12">
+            Já estás registado? Então faz <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+             
+            <br />
+        </fieldset>
+        
+        
         {{ form_end(form) }}
+        
+       
+        
     </div>
 </section>
 

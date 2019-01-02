@@ -54,8 +54,6 @@
 					<div class="col-xs-12 navigation-container">
 						<div id="navigation7" class="navbar-collapse collapse">
 							<ul class="navigation-list pull-left light-text">
-                                                            
-                                                            
                                                         <li class="navigation-item"><a href="#business" class="navigation-link">{% trans from 'messages_2019' %}Empresas{% endtrans %}</a></li>
 							<li class="navigation-item"><a href="#speakers" class="navigation-link">{% trans from 'messages_2019' %}Oradores{% endtrans %}</a></li>
 							<li class="navigation-item"><a href="#schedule" class="navigation-link">{% trans from 'messages_2019' %}Agenda{% endtrans %}</a></li>
@@ -82,7 +80,19 @@
 								</li>#}
 							</ul>
 
-							{#<a href="#" class="hidden-xs pull-right buy-btn">Buy Tickets</a>#}
+                                                        
+                                                        {% if app.user %}
+
+                                                                                            
+                                
+                                <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="pull-right buy-btn">{% trans from 'messages_2019' %}Participar{% endtrans %}</a>
+ {% else %}
+    <a class="pull-right buy-btn" href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+ {% endif %}
+                                                        
+							
+                                                        
+                                                        
 						</div>
 					</div>
 				</div>

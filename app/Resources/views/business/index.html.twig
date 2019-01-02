@@ -2,12 +2,12 @@
 
 {% block body %}
 
-    <h1>Businesses list</h1>
+    <h1>Lista de Empresas</h1>
 
-
+    <hr/>
     <ul class="list-inline">
         <li  class="list-inline-item">
-            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Create a new business</a>
+            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Criar Empresa</a>
         </li>
     </ul>
 
@@ -18,6 +18,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Logotipo</th>
+                <th>Contacto</th>
                     {#<th>Presentation</th>#}
                 <th>Email</th>
                 <th>Phone</th>
@@ -31,7 +32,8 @@
                     <td>{{ business.id }}</td>
                     <td>{{ business.name }}</td>
                     <td><img style="width: 100px" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{business.image }}" /> </td>
-                        {#<td>{{ business.presentation }}</td>#}
+                    <td>{{ business.contact}}</td>
+                    {#<td>{{ business.presentation }}</td>#}
                     <td>{{ business.email }}</td>
                     <td>{{ business.phone }}</td>
                     {#<td>{{ business.website }}</td>#}
@@ -42,7 +44,7 @@
                                 <a href="{{ path('admin_business_show', { 'id': business.id }) }}">show</a>
                             </li>#}
                             <li class="list-inline-item">
-                                <a class="btn btn-outline-primary" href="{{ path('admin_business_edit', { 'id': business.id }) }}">edit</a>
+                                <a class="btn btn-outline-primary" href="{{ path('admin_business_edit', { 'id': business.id }) }}">Editar Empresa</a>
                             </li>
                         </ul>
                     </td>
@@ -52,7 +54,7 @@
     </table>
     <ul class="list-inline">
         <li  class="list-inline-item">
-            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Create a new business</a>
+            <a class="btn btn-primary" href="{{ path('admin_business_new') }}">Criar Empresa</a>
         </li>
     </ul>
 {% endblock %}

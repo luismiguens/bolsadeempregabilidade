@@ -21,11 +21,11 @@
     <div class="preloader"></div>
 </div>
 
-<section class="section bg-cover bg1 window-height">
+<section class="section bg-cover bg1_2019 window-height">
 
     <div class="container light-text align-center">
-        <h3><span class="highlight">Sign up</span> for event now!</h3>
-        <p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>
+        <h3><span class="highlight">Autentica-te! </span>Bem vindo!</h3>
+        {#<p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>#}
         <br/>
         <br/>
     </div>
@@ -33,7 +33,7 @@
         {#<form class="form registration-form align-center">#}
         {#        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}#}
 <form action="{{ path("fos_user_security_check") }}" method="post" class="form registration-form align-center">
-        <h5><span class="highlight">Event Registration</span></h5>
+        <h5><span class="highlight">Autenticação no Evento</span></h5>
 
 
 
@@ -66,6 +66,15 @@
             </fieldset>
             <hr>
             <input class="btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+            
+            
+             <hr/>
+         <fieldset class="col-sm-12">
+            Não estás registado? Segue para <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+             
+            <br />
+        </fieldset>
+            
         </form>
 
 

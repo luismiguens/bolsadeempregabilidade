@@ -1,7 +1,13 @@
 admin_business_index:
-    path:     /
+    path:     /index
     defaults: { _controller: "AppBundle:Business:index" }
     methods:  GET
+    
+admin_business_index_user:
+    path:     /index_user
+    defaults: { _controller: "AppBundle:Business:indexUser" }
+    methods:  GET    
+    
 
 admin_business_show:
     path:     /{id}/show

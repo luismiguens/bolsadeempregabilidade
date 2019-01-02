@@ -26,6 +26,18 @@ class BusinessController extends Controller
             'businesses' => $businesses,
         ));
     }
+    
+    
+        public function indexUserAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $businesses = $em->getRepository('AppBundle:Business')->findAll();
+
+        return $this->render('business/index_user.html.twig', array(
+            'businesses' => $businesses,
+        ));
+    }
 
     /**
      * Creates a new business entity.
