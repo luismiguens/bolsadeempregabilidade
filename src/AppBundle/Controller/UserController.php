@@ -97,9 +97,16 @@ class UserController extends Controller
     }
 
      
-    public function afterLoginAction(Request $request, UserInterface $user)
+    public function afterLoginAction(Request $request)
     {
-        
+        //dump('aaaaa');
+         $user = $this->getUser();
+         
+         
+          $this->get('session')->getFlashBag()->add(
+                    'notice', 'Bem-vindo ao website da Bolsa de Empregabilidade '.$user->getUsername(). '! Aproveita para completares os teus dados pessoais!'
+            );
+         
         return $this->editAction($request, $user);
         
         

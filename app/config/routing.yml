@@ -2,11 +2,12 @@ app_bundle:
     resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /
 
-#fos_user:
-#    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-    
-    
-    # FOS User bundle
+
+  
+
+  
+  
+# FOS User bundle
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
     prefix: /{_locale}
@@ -26,3 +27,15 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /{_locale}/profile
+    
+
+    
+fos_user_registration_confirmed:
+    path:      /{_locale}/register/confirmed
+    defaults:  { _controller: AppBundle:User:afterLogin}  
+    
+
+    
+#    <route id="fos_user_registration_confirm" path="/confirm/{token}" methods="GET">
+#        <default key="_controller">fos_user.registration.controller:confirmAction</default>
+#    </route>

@@ -54,7 +54,9 @@ class DefaultController extends Controller {
         $yearNumber = $request->get('year');
         $year = $em->getRepository('AppBundle:Year')->findOneBy(['number' => $yearNumber]);
 
-        $businesses = $year->getBusiness();
+        
+        $businesses = $em->getRepository('AppBundle:Business')->findBusinessByYear($year);
+        //$businesses = $year->getBusiness();
         $speakers = $year->getSpeakers();
         $photos = $year->getPhotos();
         $sponsors = $year->getSponsors();

@@ -24,7 +24,7 @@
     </head>
 
     <body>
-                <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ path('homepage')}}">Bolsa de Empregabilidade &nbsp;</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -32,30 +32,32 @@
                         <a href="{{ path('homepage')}}#business" class="nav-link">{% trans from 'messages_2019' %}Empresas{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#speakers" class="nav-link">{% trans from 'messages_2019' %}Oradores{% endtrans %}</a>
+                        <a href="{{ path('homepage')}}#speakers" class="nav-link">{% trans from 'messages_2019' %}Oradores{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#schedule" class="nav-link">{% trans from 'messages_2019' %}Agenda{% endtrans %}</a>
+                        <a href="{{ path('homepage')}}#schedule" class="nav-link">{% trans from 'messages_2019' %}Agenda{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#feedback" class="nav-link">{% trans from 'messages_2019' %}Testemunhos{% endtrans %}</a>
+                        <a href="{{ path('homepage')}}#feedback" class="nav-link">{% trans from 'messages_2019' %}Testemunhos{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#sponsors" class="nav-link">{% trans from 'messages_2019' %}Patrocinadores{% endtrans %}</a>
+                        <a href="{{ path('homepage')}}#sponsors" class="nav-link">{% trans from 'messages_2019' %}Patrocinadores{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contacts" class="nav-link">{% trans from 'messages_2019' %}Contactos{% endtrans %}</a>
+                        <a href="{{ path('homepage')}}#contacts" class="nav-link">{% trans from 'messages_2019' %}Contactos{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ path('homepage', { 'year': 2018 }) }}" class="nav-link">Edição 2018</a>
                     </li>
+
+                   
                 </ul>
             </div>
-            {#<ul class="navbar-nav px-3">
+            <ul class="navbar-nav px-3">
               <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Sign out</a>
+                <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Sign out</a>
               </li>
-            </ul>#}
+            </ul>
         </nav>
 
 
@@ -83,7 +85,6 @@
                                 </li>
                             {% endfor %}
 
-
                             {% if  app.user.business is not null and app.user.business|length > 0 %}
                                 {% for business in app.user.business %}
                                     <li class="nav-item">
@@ -93,7 +94,6 @@
                                         </a>
                                     </li>
                                 {% endfor %}
-
                             {% else %}
                                 <li class="nav-item">
                                     <a class="nav-link " href="{{ path('admin_job_index_user') }}">
@@ -101,11 +101,7 @@
                                         Lista de Ofertas 
                                     </a>
                                 </li>
-
-
                             {% endif %}
-
-
 
                             {#<li class="nav-item">
                                 <a class="nav-link" href="{{ path('admin_business_index_user') }}">
@@ -113,14 +109,6 @@
                                     Lista de Empresas 
                                 </a>
                             </li>#}
-
-
-
-
-
-
-
-
                         </ul>
 
 

@@ -43,12 +43,10 @@ homepage:
         _locale:  en|pt
 
         
-after_login:
-    path:      /{_locale}/{year}
-    defaults:  { _controller: AppBundle:User:afterLogin, _locale: pt, year: 2019 }
-    requirements:
-        year:  2018|2019
-        _locale:  en|pt
+after_login_route_name:
+    path:      /after_login
+    defaults:  { _controller: AppBundle:User:afterLogin}
+
         
                 
         
