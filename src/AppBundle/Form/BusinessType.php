@@ -20,14 +20,14 @@ class BusinessType extends AbstractType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder->add('name', TextType::class, ['label' => "Nome"])
-                ->add('taxName', TextType::class, ['label' => "Nome Fiscal"])
-                ->add('address', TextType::class, ['label' => "Morada"])
-                ->add('nif', TextType::class, ['label' => "Número Fiscal"])
-                ->add('contact', TextType::class, ['label' => "Contacto"])
-                ->add('representatives', TextType::class, ['label' => "Representantes"])
-                ->add('presentation', TextareaType::class, ['label' => "Apresentação"])
-                ->add('email', EmailType::class, ['label' => "Email"])
-                ->add('phone', TelType::class, ['label' => "Telefone"])
+                ->add('taxName', TextType::class, ['label' => "Nome Fiscal", 'required' => false])
+                ->add('address', TextType::class, ['label' => "Morada", 'required' => false])
+                ->add('nif', TextType::class, ['label' => "Número Fiscal", 'required' => false])
+                ->add('contact', TextType::class, ['label' => "Contacto", 'required' => false])
+                ->add('representatives', TextType::class, ['label' => "Representantes", 'required' => false])
+                ->add('presentation', TextareaType::class, ['label' => "Apresentação", 'required' => false])
+                ->add('email', EmailType::class, ['label' => "Email", 'required' => false])
+                ->add('phone', TelType::class, ['label' => "Telefone", 'required' => false])
                 ->add('website', UrlType::class, ['label' => "Website"])
                 //->add('image')
                 ->add('imageFile', VichImageType::class, ['required' => false,
@@ -40,9 +40,9 @@ class BusinessType extends AbstractType {
                     'allow_delete' => true,
                     'download_link' => true])
                 //->add('updatedAt')
-                ->add('years', null, ['label' => "Edições"])
+                ->add('years', null, ['label' => "Edições", 'required' => false])
                 //->add('jobs')
-                ->add('users', null, ['label' => 'Administradores']);
+                ->add('users', null, ['label' => 'Administradores', 'required' => false]);
     }
 
 /**

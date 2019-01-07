@@ -34,13 +34,11 @@ class BusinessRepository extends EntityRepository {
         $rsm->addFieldResult('b', 'presentation', 'presentation');
         $rsm->addFieldResult('b', 'image', 'image');
         
-        
-        
-
         $query = $this->_em->createNativeQuery('SELECT LENGTH(business.name) l, id, name, website, presentation, image '
                 . 'FROM business '
                 . 'INNER JOIN business_year '
-                . 'ON business_year.year_id = ? '
+                . 'ON business.id = business_year.business_id '
+                . 'WHERE business_year.year_id = ? '
                 . 'ORDER BY l', $rsm);
         $query->setParameter(1, $year->getId());
 
