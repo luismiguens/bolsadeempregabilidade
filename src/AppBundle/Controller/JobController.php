@@ -198,7 +198,7 @@ class JobController extends Controller {
             $emailCandidato = $user->getEmail();
             $jobsEmpresa =  $this->generateUrl('admin_job_index_business', array('id' => $job->getBusiness()->getId()));
 
-            $message = (new \Swift_Message('TESTES - Candidatura a Emprego submetida em http://bolsadeempregabilidade.pt'))
+            $message = (new \Swift_Message('Candidatura a Emprego submetida em http://bolsadeempregabilidade.pt'))
                     ->setFrom('geral@forumturismo21.org', "Bolsadeempregabilidade.pt")
                     ->setTo($emailEmpresa)
                     ->setCc(['geral@forumturismo21.org', $emailResponsavelEmpresa])
