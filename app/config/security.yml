@@ -60,5 +60,15 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+#        - { path: ^/admin_business/, role: IS_AUTHENTICATED_FULLY }
+#        - { path: ^/admin_speaker/, role: ROLE_ADMIN }
+#        - { path: ^/admin_photo/, role: ROLE_ADMIN }
+#        - { path: ^/admin_sponsor/, role: ROLE_ADMIN }
+#        - { path: ^/admin_fos_user/, role: IS_AUTHENTICATED_FULLY }
+#        - { path: ^/admin_job/, role: IS_AUTHENTICATED_FULLY }
+#        
+#        - { path: ^/admin_business/, role: IS_AUTHENTICATED_FULLY }
+#        - { path: ^/admin_job/, role: IS_AUTHENTICATED_FULLY }
+#        - { path: ^/admin_fos_user/, role: IS_AUTHENTICATED_FULLY }
         
         

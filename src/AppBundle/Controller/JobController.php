@@ -200,6 +200,35 @@ $jobs = $business->getJobs();
             $em->merge($job);
             $em->flush();
 
+            
+            // - Enviar email
+             $mailer = $this->get('mailer');
+        $message = \Swift_Message::newInstance();
+
+        //DEMO FORM
+       
+
+            $message = (new Swift_Message('Pedido de demonstração em Consolidador.com'))
+                    ->setFrom('consolidador.no.reply@gmail.com', "Consolidador.com")
+                    ->setTo('comercial@consolidador.com')
+                    ->setCc(['lmiguens@consolidador.com', 'jfernandes@consolidador.com'])
+                    ->setBody('Foi efetuado um novo pedido de demonstração no site Consolidador.com com os seguintes dados:' . '<br><br>'
+                            . 'Nome do Contacto: ' . '' . $form["contactName"]->getData() . '<br>'   
+                            . 'Nome da Agência: ' . '' . $form["businessName"]->getData() . '<br>'
+                            . 'Email: ' . '' . $form["email"]->getData() . '<br>'
+                            . 'Telefone: ' . '' . $form["phoneNumber"]->getData() . '<br>'
+                    )
+                    ->setContentType("text/html");
+
+            $mailer->send($message);
+       
+            
+            
+            
+            
+            
+            
+            
             $this->get('session')->getFlashBag()->add(
                     'notice', 'Candidatura Criada com Sucesso!'
             );
