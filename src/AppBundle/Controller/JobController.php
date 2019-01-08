@@ -207,7 +207,7 @@ class JobController extends Controller {
                             . 'Nome do Candidato: ' . '' . $nomeCandidato . '<br/>'
                             . 'Email do Candidato: ' . '' . $emailCandidato . '<br/>'
                             . '<br/>'
-                            . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos '.$tituloEmprego.' clicando no seguinte <a href="http://bolsadeempregabilidade.pt/'.$jobsEmpresa.'">link</a>'
+                            . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos '.$tituloEmprego.' clicando no seguinte <a href="http://bolsadeempregabilidade.pt'.$jobsEmpresa.'">link</a>'
                     )
                     ->setContentType("text/html");
 //            if ($user->getCv() != NULL):
@@ -222,7 +222,7 @@ class JobController extends Controller {
             );
         }
 
-        //return $this->redirectToRoute('admin_job_submit', array('id' => $job->getId()));
+        return $this->redirectToRoute('admin_job_submit', array('id' => $job->getId()));
     }
 
     /**
