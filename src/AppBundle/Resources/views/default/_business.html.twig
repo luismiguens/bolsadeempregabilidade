@@ -14,7 +14,7 @@
         {% for business in businesses %}
             <div class="col-sm-3">
                 <div class="speaker">
-                    <div class="photo-wrapper"><a target="_blank" href="{{ business.website }}"> <img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" /></a></div>
+                    <div class="photo-wrapper">{#<a target="_blank" href="{{ business.website }}">#}<img class="img-responsive" src="{{ vich_uploader_asset(business, 'imageFile') }}" alt="{{ business.name }}" />{#</a>#}</div>
                     <h3 class="name">{{ business.name }}</h3>
                     <p class="about">{{ business.presentation }}</p>
                 </div>
