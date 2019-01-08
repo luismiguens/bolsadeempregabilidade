@@ -210,10 +210,10 @@ class JobController extends Controller {
                             . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos '.$tituloEmprego.' clicando no seguinte <a href="http://bolsadeempregabilidade.pt/'.$jobsEmpresa.'">link</a>'
                     )
                     ->setContentType("text/html");
-            if ($user->getCv() != NULL):
-                $curriculo = $request->getUriForPath('/uploads/curriculo/' . $user->getCv());
-                $message->attach(\Swift_Attachment::fromPath($curriculo)->setFilename('curriculo_' . $nomeCandidato . '' . pathinfo($user->getCv(), PATHINFO_EXTENSION)));
-            endif;
+//            if ($user->getCv() != NULL):
+//                $curriculo = $request->getUriForPath('/uploads/curriculo/' . $user->getCv());
+//                $message->attach(\Swift_Attachment::fromPath($curriculo)->setFilename('curriculo_' . $nomeCandidato . '' . pathinfo($user->getCv(), PATHINFO_EXTENSION)));
+//            endif;
 
             $this->get('mailer')->send($message);
 
