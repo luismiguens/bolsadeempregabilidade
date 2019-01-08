@@ -14,10 +14,8 @@
         <thead>
             <tr>
                 <th>Titulo</th>
-                <th>Descrição</th>
                 <th>Área</th>
-                <th>Localidade</th>
-                <th>Vagas</th>
+                <th>Candidatos</th>
                 <th>Acções</th>
             </tr>
         </thead>
@@ -25,10 +23,14 @@
             {% for job in jobs %}
                 <tr>
                     <td>{{ job.title }}</td>
-                    <td>{{ job.description }}</td>
                     <td>{{ job.area }}</td>
-                    <td>{{ job.location }}</td>
-                    <td>{{ job.openings }}</td>
+                    <td>
+                        <ul>
+                    {% for user in job.users %}
+                        <li>{{user.name}} - <a href="{{ vich_uploader_asset(user, 'cvFile') }}" />Download Curriculo</a></li>
+                        {% endfor %}
+                        </ul>
+                    </td>
                     <td>
                         <ul  class="list-inline">
                             <li class="list-inline-item">

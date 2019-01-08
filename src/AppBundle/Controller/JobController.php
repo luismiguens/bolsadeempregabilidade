@@ -40,28 +40,22 @@ class JobController extends Controller {
         ));
     }
 
-    
     /**
      * Lists all job entities.
      *
      */
     public function indexBusinessAction(\AppBundle\Entity\Business $business) {
         $em = $this->getDoctrine()->getManager();
-    
-        
+
+
         $user = $this->getUser();
-    
-        
-  //      $business_lista = $user->getBusiness();
+
+
+        //      $business_lista = $user->getBusiness();
 //$business = $business_lista[0];
-        
-
-
-        
-        
         //$jobs = $em->getRepository('AppBundle:Job')->findAll();
 
-$jobs = $business->getJobs();
+        $jobs = $business->getJobs();
 
 
         return $this->render('job/index_business.html.twig', array(
@@ -69,9 +63,6 @@ $jobs = $business->getJobs();
         ));
     }
 
-    
-    
-    
     /**
      * Creates a new job entity.
      *
@@ -183,8 +174,6 @@ $jobs = $business->getJobs();
         return $this->redirectToRoute('admin_job_index');
     }
 
-  
-
     /**
      * Creates a job entity.
      *
@@ -200,45 +189,43 @@ $jobs = $business->getJobs();
             $em->merge($job);
             $em->flush();
 
-            
-//            // - Enviar email
-//             $mailer = $this->get('mailer');
-//        $message = \Swift_Message::newInstance();
-//
-//        //DEMO FORM
-//       
-//
-//            $message = (new Swift_Message('Pedido de demonstração em Consolidador.com'))
-//                    ->setFrom('consolidador.no.reply@gmail.com', "Consolidador.com")
-//                    ->setTo('comercial@consolidador.com')
-//                    ->setCc(['lmiguens@consolidador.com', 'jfernandes@consolidador.com'])
-//                    ->setBody('Foi efetuado um novo pedido de demonstração no site Consolidador.com com os seguintes dados:' . '<br><br>'
-//                            . 'Nome do Contacto: ' . '' . $form["contactName"]->getData() . '<br>'   
-//                            . 'Nome da Agência: ' . '' . $form["businessName"]->getData() . '<br>'
-//                            . 'Email: ' . '' . $form["email"]->getData() . '<br>'
-//                            . 'Telefone: ' . '' . $form["phoneNumber"]->getData() . '<br>'
-//                    )
-//                    ->setContentType("text/html");
-//
-//            $mailer->send($message);
-//       
-//            
-//            
-            
-            
-            
-            
-            
+            // - Enviar email
+            $emailEmpresa = $job->getBusiness()->getEmail();
+            $emailResponsavelEmpresa = $job->getUsers()[0]->getEmail();
+
+            $tituloEmprego = $job->getTitle();
+            $nomeCandidato = $user->getName();
+            $emailCandidato = $user->getEmail();
+            $jobsEmpresa =  $this->generateUrl('admin_job_index_business', array('id' => $job->getId()));
+
+            $message = (new \Swift_Message('TESTES - Candidatura a Emprego submetida em http://bolsadeempregabilidade.pt'))
+                    ->setFrom('geral@forumturismo21.org', "Bolsadeempregabilidade.pt")
+                    ->setTo($emailEmpresa)
+                    ->setCc(['geral@forumturismo21.org', $emailResponsavelEmpresa])
+                    ->setBody('Foi submetida uma nova candidatura a emprego no site http://bolsadeempregabilidade.pt com os seguintes dados:' . '<br/>'
+                            . 'Titulo do Emprego: ' . '' . $tituloEmprego . '<br/>'
+                            . 'Nome do Candidato: ' . '' . $nomeCandidato . '<br/>'
+                            . 'Email do Candidato: ' . '' . $emailCandidato . '<br/>'
+                            . '<br/>'
+                            . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos '.$tituloEmprego.' clicando no seguinte <a href="http://bolsadeempregabilidade.pt/'.$jobsEmpresa.'">link</a>'
+                    )
+                    ->setContentType("text/html");
+            if ($user->getCv() != NULL):
+                $curriculo = $request->getUriForPath('/uploads/curriculo/' . $user->getCv());
+                $message->attach(\Swift_Attachment::fromPath($curriculo)->setFilename('curriculo_' . $nomeCandidato . '' . pathinfo($user->getCv(), PATHINFO_EXTENSION)));
+            endif;
+
+            $this->get('mailer')->send($message);
+
             $this->get('session')->getFlashBag()->add(
                     'notice', 'Candidatura Criada com Sucesso!'
             );
         }
 
-        return $this->redirectToRoute('admin_job_submit', array('id' => $job->getId()));
+        //return $this->redirectToRoute('admin_job_submit', array('id' => $job->getId()));
     }
-    
-    
-        /**
+
+    /**
      * Creates a job entity.
      *
      */
@@ -284,15 +271,15 @@ $jobs = $business->getJobs();
      * @return \Symfony\Component\Form\Form The form
      */
     private function createSubmitForm(Job $job) {
-        
+
         return $this->createFormBuilder()
                         ->setAction($this->generateUrl('admin_job_create_submit', array('id' => $job->getId())))
                         ->setMethod('POST')
                         ->getForm()
         ;
     }
-    
-      /**
+
+    /**
      * Creates a form to delete a job entity.
      *
      * @param Job $job The job entity
@@ -300,7 +287,7 @@ $jobs = $business->getJobs();
      * @return \Symfony\Component\Form\Form The form
      */
     private function deleteSubmitForm(Job $job) {
-        
+
         return $this->createFormBuilder()
                         ->setAction($this->generateUrl('admin_job_delete_submit', array('id' => $job->getId())))
                         ->setMethod('POST')
