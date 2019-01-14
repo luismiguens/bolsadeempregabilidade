@@ -1,3 +1,14 @@
+{#{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}#}
+
+
+
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% form_theme form _self %}
@@ -30,12 +41,12 @@
         <br/>
     </div>
     <div class="container">
-        {#<form class="form registration-form align-center">#}
-        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}
+        {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'form registration-form align-center fos_user_resetting_reset' } }) }}
+        {#{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}#}
 
-        <h5><span class="highlight">Registo no evento</span></h5>
+        <h5><span class="highlight">Reset Password</span></h5>
 
-        <fieldset class="col-sm-12">
+{#        <fieldset class="col-sm-12">
             {{ form_label(form.email) }}
             {{ form_errors(form.email) }}
             {{ form_widget(form.email) }}
@@ -50,11 +61,13 @@
         <fieldset class="col-sm-12">
             {{ form_errors(form.plainPassword) }}
             {{ form_widget(form.plainPassword) }}
-        </fieldset>
+        </fieldset>#}
+
+
 
         {{ form_widget(form) }}
 
-        <input type="submit" value="submit" class="btn">
+        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" class="btn">
 
         <hr/>
         <fieldset class="col-sm-12">
@@ -69,4 +82,5 @@
 
     </div>
 </section>
+
 

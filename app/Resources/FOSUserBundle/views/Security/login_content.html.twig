@@ -32,20 +32,20 @@
     <div class="container">
         {#<form class="form registration-form align-center">#}
         {#        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}#}
-<form action="{{ path("fos_user_security_check") }}" method="post" class="form registration-form align-center">
-        <h5><span class="highlight">Autenticação no Evento</span></h5>
+        <form action="{{ path("fos_user_security_check") }}" method="post" class="form registration-form align-center">
+            <h5><span class="highlight">Autenticação no Evento</span></h5>
 
 
 
 
-        {#{{ form_errors(form.age) }}#}      
+            {#{{ form_errors(form.age) }}#}      
 
 
-        {% if error %}
-            <div style="color: red;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+            {% if error %}
+                <div style="color: red;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
 
-        
+
             {% if csrf_token %}
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
             {% endif %}
@@ -66,15 +66,17 @@
             </fieldset>
             <hr>
             <input class="btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-            
-            
-             <hr/>
-         <fieldset class="col-sm-12">
-            Não estás registado? Segue para <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
-             
-            <br />
-        </fieldset>
-            
+
+
+            <hr/>
+            <fieldset class="col-sm-12">
+                Não estás registado? Segue para <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
+
+                <br />
+
+                Não tens password? Segue para <a href="{{ path('fos_user_resetting_request') }}">Recuperar</a>
+            </fieldset>
+
         </form>
 
 

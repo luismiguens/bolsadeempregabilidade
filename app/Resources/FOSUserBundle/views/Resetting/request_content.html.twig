@@ -1,6 +1,17 @@
+{#{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+    <div>
+        <label for="username">{{ 'resetting.request.username'|trans }}</label>
+        <input type="text" id="username" name="username" required="required" />
+    </div>
+    <div>
+        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
+    </div>
+</form>#}
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% form_theme form _self %}
+
 
 {# form_errors.html.twig #}
 {% block form_errors %}
@@ -24,46 +35,34 @@
 <section class="section bg-cover bg1_2019 window-height">
 
     <div class="container light-text align-center">
-        <h3><span class="highlight">Regista-te</span> Um mundo de oportunidades!</h3>
+        <h3>{#<span class="highlight">Regista-te</span> Um mundo de oportunidades!#}</h3>
         {#<p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>#}
         <br/>
         <br/>
     </div>
     <div class="container">
         {#<form class="form registration-form align-center">#}
-        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}
-
-        <h5><span class="highlight">Registo no evento</span></h5>
-
-        <fieldset class="col-sm-12">
-            {{ form_label(form.email) }}
-            {{ form_errors(form.email) }}
-            {{ form_widget(form.email) }}
-        </fieldset>
+<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="form registration-form align-center fos_user_resetting_request">
+        <h5><span class="highlight">Recuperar Password</span></h5>
 
         <fieldset class="col-sm-12">
-            {{ form_label(form.username) }}
-            {{ form_errors(form.username) }}
-            {{ form_widget(form.username) }}
+            <label for="username">{{ 'resetting.request.username'|trans }}</label>
+            <input type="text" id="username" name="username" required="required" />
         </fieldset>
 
-        <fieldset class="col-sm-12">
-            {{ form_errors(form.plainPassword) }}
-            {{ form_widget(form.plainPassword) }}
-        </fieldset>
 
-        {{ form_widget(form) }}
 
-        <input type="submit" value="submit" class="btn">
+        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn">
 
         <hr/>
         <fieldset class="col-sm-12">
             Já estás registado? Então faz <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+
             <br />
         </fieldset>
 
 
-        {{ form_end(form) }}
+       </form>
 
 
 

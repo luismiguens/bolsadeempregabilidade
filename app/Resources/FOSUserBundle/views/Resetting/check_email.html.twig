@@ -1,6 +1,15 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% form_theme form _self %}
+{% block fos_user_content %}
+
+
+
+
+
+
+
 
 {# form_errors.html.twig #}
 {% block form_errors %}
@@ -24,18 +33,16 @@
 <section class="section bg-cover bg1_2019 window-height">
 
     <div class="container light-text align-center">
-        <h3><span class="highlight">Regista-te</span> Um mundo de oportunidades!</h3>
+        <h3>{#<span class="highlight">Regista-te</span> Um mundo de oportunidades!#}</h3>
         {#<p class="text-alt">and get your tickets emailed to you within <span class="highlight">24 hours</span></p>#}
         <br/>
         <br/>
     </div>
     <div class="container">
-        {#<form class="form registration-form align-center">#}
-        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'form registration-form align-center fos_user_registration_register'}}) }}
+<form action="#" method="post" class="form registration-form align-center">
+        <h5><span class="highlight">Reset Password</span></h5>
 
-        <h5><span class="highlight">Registo no evento</span></h5>
-
-        <fieldset class="col-sm-12">
+{#        <fieldset class="col-sm-12">
             {{ form_label(form.email) }}
             {{ form_errors(form.email) }}
             {{ form_widget(form.email) }}
@@ -50,11 +57,12 @@
         <fieldset class="col-sm-12">
             {{ form_errors(form.plainPassword) }}
             {{ form_widget(form.plainPassword) }}
-        </fieldset>
+        </fieldset>#}
 
-        {{ form_widget(form) }}
+<p>
+{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+</p>
 
-        <input type="submit" value="submit" class="btn">
 
         <hr/>
         <fieldset class="col-sm-12">
@@ -63,10 +71,23 @@
         </fieldset>
 
 
-        {{ form_end(form) }}
+       </form>
 
 
 
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
 
