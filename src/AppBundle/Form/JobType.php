@@ -10,8 +10,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-
 class JobType extends AbstractType {
 
     /**
@@ -72,19 +70,19 @@ class JobType extends AbstractType {
                         'Anuncio para o estrangeiro' => 'Anuncio para o estrangeiro',
                     ), 'label' => "Localidade"))
                 ->add('openings', TextType::class, ['label' => "Vagas"]);
-                //->add('createdAt')
-                //->add('business', null, ['label' => "Empresa"])
-        
-         $user = $options['user'];
-        
-       $builder->add('business', EntityType::class, [
-    'class' => 'AppBundle:Business',
-    'choices' => $user->getBusiness(),
-]);
-        
-        
-        
-        
+        //->add('createdAt')
+        //->add('business', null, ['label' => "Empresa"])
+
+        $user = $options['user'];
+
+        if (in_array($user->getId(), \Utils::DEFAULT_ADMINS)) {
+            $builder->add('business', null, ['label' => "Empresa"]);
+        } else {
+            $builder->add('business', EntityType::class, [
+                'class' => 'AppBundle:Business',
+                'choices' => $user->getBusiness(),
+            ]);
+        }
     }
 
     /**
@@ -93,7 +91,7 @@ class JobType extends AbstractType {
     public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\Job',
-             'user' => null
+            'user' => null
         ));
     }
 
