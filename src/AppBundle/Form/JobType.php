@@ -20,7 +20,7 @@ class JobType extends AbstractType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder->add('title', TextType::class, ['label' => "Titulo"])
-                ->add('description', TextareaType::class, ['label' => "Descrição", 'attr' => array('rows' => '10')])
+                ->add('description', TextareaType::class, ['label' => "Descrição", 'attr' => array('rows' => '20')])
                 ->add('area', ChoiceType::class, array(
                     'choices' => array(
                         'Administrativos' => 'Administrativos',
