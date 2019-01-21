@@ -69,7 +69,7 @@ class JobController extends Controller {
      */
     public function newAction(Request $request) {
         $job = new Job();
-        $form = $this->createForm('AppBundle\Form\JobType', $job);
+        $form = $this->createForm('AppBundle\Form\JobType', $job, array('user' => $this->getUser()));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -110,7 +110,7 @@ class JobController extends Controller {
      */
     public function editAction(Request $request, Job $job) {
         $deleteForm = $this->createDeleteForm($job);
-        $editForm = $this->createForm('AppBundle\Form\JobType', $job);
+        $editForm = $this->createForm('AppBundle\Form\JobType', $job, array('user' => $this->getUser()));
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -191,7 +191,7 @@ class JobController extends Controller {
 
             // - Enviar email
             $emailEmpresa = $job->getBusiness()->getEmail();
-            $emailResponsavelEmpresa = $job->getUsers()[0]->getEmail();
+            $emailResponsavelEmpresa = $job->getBusiness()->getUsers()[0]->getEmail();
 
             $tituloEmprego = $job->getTitle();
             $nomeCandidato = $user->getName();

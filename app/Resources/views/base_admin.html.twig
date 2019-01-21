@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../../../favicon.ico">
 
-        <title>Dashboard Template for Bootstrap</title>
+        <title>Bolsa de Empregabilidade - Administração</title>
 
 
         {% block stylesheets %}
@@ -66,10 +66,10 @@
                     </li>
                 </ul>
             </div>
-           <ul class="navbar-nav px-3">
-              <li class="nav-item text-nowrap">
-                <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Sign out</a>
-              </li>
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Sign out</a>
+                </li>
             </ul>
         </nav>
 
@@ -82,58 +82,54 @@
                     <div class="sidebar-sticky">
                         <ul class="nav flex-column">
 
+                            {#{% if  app.user.id in [10, 11, 13]  %}#}
+                                {% if  app.user.id in constant('AppBundle\\Utils\\Utils::DEFAULT_ADMINS')  %}
+                                
+                                
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('admin_business_index') }}">
+                                        <span data-feather="globe"></span>
+                                        Empresas 
+                                    </a>
+                                </li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_speaker_index') }}">
+                                        <span data-feather="mic"></span>
+                                        Oradores 
+                                    </a>
+                                </li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_photo_index') }}">
+                                        <span data-feather="image"></span>
+                                        Galeria 
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('admin_business_index') }}">
-                                    <span data-feather="globe"></span>
-                                    Empresas 
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_sponsor_index') }}">
+                                        <span data-feather="dollar-sign"></span>
+                                        Patrocinadores 
+                                    </a>
+                                </li>
 
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_fos_user_index') }}">
+                                        <span data-feather="user"></span>
+                                        Participantes 
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ path('admin_speaker_index') }}">
-                                    <span data-feather="mic"></span>
-                                    Oradores 
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ path('admin_photo_index') }}">
-                                    <span data-feather="image"></span>
-                                    Galeria 
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ path('admin_sponsor_index') }}">
-                                    <span data-feather="dollar-sign"></span>
-                                    Patrocinadores 
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ path('admin_fos_user_index') }}">
-                                    <span data-feather="user"></span>
-                                    Participantes 
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ path('admin_job_index') }}">
-                                    <span data-feather="clipboard"></span>
-                                    Ofertas 
-                                </a>
-                            </li>
-
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_job_index') }}">
+                                        <span data-feather="clipboard"></span>
+                                        Ofertas 
+                                    </a>
+                                </li>
+                            {% endif %}
                         </ul>
-
-
 
                     </div>
                 </nav>
@@ -142,12 +138,7 @@
                     <br/>
                     {% block body %}
 
-
                     {% endblock %}
-
-
-
-                    {#</div>#}
                 </main>
             </div>
         </div>

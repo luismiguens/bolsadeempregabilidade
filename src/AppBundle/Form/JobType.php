@@ -2,11 +2,15 @@
 
 namespace AppBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
+
 
 class JobType extends AbstractType {
 
@@ -15,8 +19,8 @@ class JobType extends AbstractType {
      */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder->add('title', TextType::class, ['label' => "Titulo"])
-                ->add('description', TextareaType::class, ['label' => "Descrição"])
-                ->add('area', \Symfony\Component\Form\Extension\Core\Type\ChoiceType::class, array(
+                ->add('description', TextareaType::class, ['label' => "Descrição", 'attr' => array('rows' => '10')])
+                ->add('area', ChoiceType::class, array(
                     'choices' => array(
                         'Administrativos' => 'Administrativos',
                         'Agência de Viagens' => 'Agência de Viagens',
@@ -42,7 +46,7 @@ class JobType extends AbstractType {
                         'Sala e Bar' => 'Sala e Bar',
                         'SPA e Beleza' => 'SPA e Beleza',
                     ), 'label' => "Área"))
-                ->add('location', \Symfony\Component\Form\Extension\Core\Type\ChoiceType::class, array(
+                ->add('location', ChoiceType::class, array(
                     'choices' => array(
                         'Lisboa' => 'Lisboa',
                         'Porto' => 'Porto',
@@ -67,11 +71,20 @@ class JobType extends AbstractType {
                         'Todas a regiões' => 'Todas a regiões',
                         'Anuncio para o estrangeiro' => 'Anuncio para o estrangeiro',
                     ), 'label' => "Localidade"))
-                ->add('openings', TextType::class, ['label' => "Vagas"])
+                ->add('openings', TextType::class, ['label' => "Vagas"]);
                 //->add('createdAt')
-                ->add('business', null, ['label' => "Empresa"])
-//                ->add('users', null, ['label'=>"Participantes"])
-        ;
+                //->add('business', null, ['label' => "Empresa"])
+        
+         $user = $options['user'];
+        
+       $builder->add('business', EntityType::class, [
+    'class' => 'AppBundle:Business',
+    'choices' => $user->getBusiness(),
+]);
+        
+        
+        
+        
     }
 
     /**
@@ -79,7 +92,8 @@ class JobType extends AbstractType {
      */
     public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Job'
+            'data_class' => 'AppBundle\Entity\Job',
+             'user' => null
         ));
     }
 

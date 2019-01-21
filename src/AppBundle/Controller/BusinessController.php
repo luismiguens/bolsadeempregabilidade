@@ -46,7 +46,7 @@ class BusinessController extends Controller
     public function newAction(Request $request)
     {
         $business = new Business();
-        $form = $this->createForm('AppBundle\Form\BusinessType', $business);
+        $form = $this->createForm('AppBundle\Form\BusinessType', $business, array('user' => $this->getUser()));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -88,7 +88,7 @@ class BusinessController extends Controller
     public function editAction(Request $request, Business $business)
     {
         $deleteForm = $this->createDeleteForm($business);
-        $editForm = $this->createForm('AppBundle\Form\BusinessType', $business);
+        $editForm = $this->createForm('AppBundle\Form\BusinessType', $business, array('user' => $this->getUser()));
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

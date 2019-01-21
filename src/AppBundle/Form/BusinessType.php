@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use LogicException;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
@@ -9,11 +10,18 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Security\Core\Security;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
-
 class BusinessType extends AbstractType {
+//    private $security;
+//
+//    public function __construct(Security $security) {
+//        $this->security = $security;
+//    }
 
     /**
      * {@inheritdoc}
@@ -40,18 +48,23 @@ class BusinessType extends AbstractType {
                     'allow_delete' => true,
                     'download_link' => true])
                 //->add('updatedAt')
-                ->add('years', null, ['label' => "Edições", 'required' => false])
-                //->add('jobs')
-                ->add('users', null, ['label' => 'Administradores', 'required' => false]);
+                ->add('years', null, ['label' => "Edições", 'required' => false]);
+
+
+        $user = $options['user'];
+
+        if (in_array($user->getId(), \Utils::DEFAULT_ADMINS)) {
+            $builder->add('users', null, ['label' => 'Administradores', 'required' => false]);
+        }
     }
 
-/**
+    /**
      * {@inheritdoc}
      */
-
     public function configureOptions(OptionsResolver $resolver) {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Business'
+            'data_class' => 'AppBundle\Entity\Business',
+            'user' => null
         ));
     }
 
