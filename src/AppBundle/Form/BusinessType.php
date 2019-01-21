@@ -2,7 +2,7 @@
 
 namespace AppBundle\Form;
 
-use LogicException;
+use AppBundle\Utils\Utils;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
@@ -10,11 +10,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Security\Core\Security;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 class BusinessType extends AbstractType {
 //    private $security;
@@ -53,7 +51,7 @@ class BusinessType extends AbstractType {
 
         $user = $options['user'];
 
-        if (in_array($user->getId(), \Utils::DEFAULT_ADMINS)) {
+        if (in_array($user->getId(), Utils::DEFAULT_ADMINS)) {
             $builder->add('users', null, ['label' => 'Administradores', 'required' => false]);
         }
     }
