@@ -32,7 +32,7 @@
                             <h4 class="modal-title" id="myModalLabel">Ofertas da empresa {{ business.name }}</h4>
                         </div>
                         <div class="modal-body">
-                            {% for jobs in business.jobs %}
+                            {% for job in business.jobs %}
  <div class="row">
           <div class="col-md-4">{{job.title}}</div>
           <div class="col-md-6 ">{{job.description}}</div>
