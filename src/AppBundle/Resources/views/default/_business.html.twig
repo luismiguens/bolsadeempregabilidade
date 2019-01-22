@@ -18,45 +18,63 @@
                     <h3 class="name">{{ business.name }}</h3>
                     {#<p class="about">{{ business.presentation }}</p>#}
 
-                    
+
                     {% if business.jobs|length > 0 %}
-                    {#<p><a href="#" data-toggle="modal" data-target="#myModal_{{ business.id }}">Ver Ofertas</a>#}
-                    {% endif %}
+                        <p><a href="#" data-toggle="modal" data-target="#myModal_{{ business.id }}">Ver Ofertas</a>
+                        {% else %}
+                        <p><a href="#">Sem Ofertas</a>
+                        {% endif %}
                 </div>
             </div>
 
-                
-                {% if business.jobs|length > 0 %}
-            <!-- Modal -->
-            <div class="modal fade bs-example-modal-lg" id="myModal_{{ business.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Ofertas da empresa {{ business.name }}</h4>
-                        </div>
-                        <div class="modal-body">
-                            {% for job in business.jobs %}
-                                <div class="row">
-                                    <div class="col-md-4">{{job.title}}</div>
-                                    <div class="col-md-6 ">{{job.description}}</div>
-                                </div>
 
-                            {% endfor %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                            {#<button type="button" class="btn btn-primary">Save changes</button>#}
-                            {% if app.user %}
-                                <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="btn btn-primary">{% trans from 'messages_2019' %}Oportunidades{% endtrans %}</a>
-                            {% else %}
-                                <a class="btn btn-primary" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2019' %}Registar{% endtrans %}</a>
-                            {% endif %}
+            {% if business.jobs|length > 0 %}
+                <!-- Modal -->
+                <div class="modal fade bs-example-modal-lg" id="myModal_{{ business.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Ofertas da empresa {{ business.name }}</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td>Título</td>
+                                            <td>Descrição</td>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        {% for job in business.jobs %}
+                                            <tr>
+                                                <td>{{job.title}}</td>
+                                                <td>{{job.description}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+
+                                </table>
+
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                {#<button type="button" class="btn btn-primary">Save changes</button>#}
+                                {% if app.user %}
+                                    <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="btn btn-primary">{% trans from 'messages_2019' %}Oportunidades{% endtrans %}</a>
+                                {% else %}
+                                    <a class="btn btn-primary" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2019' %}Registar{% endtrans %}</a>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-{% endif %}
+            {% endif %}
 
 
 
