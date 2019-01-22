@@ -18,11 +18,17 @@
                     <h3 class="name">{{ business.name }}</h3>
                     {#<p class="about">{{ business.presentation }}</p>#}
 
-                    {#<p><a href="#" data-toggle="modal" data-target="#myModal_{{ business.id }}">Ver Ofertas</a>#}
-
+                    
+                    {{business.jobs|length}}
+                    
+                    {% if business.jobs|length > 0 %}
+                    <p><a href="#" data-toggle="modal" data-target="#myModal_{{ business.id }}">Ver Ofertas</a>
+                    {% endif %}
                 </div>
             </div>
 
+                
+                {% if business.jobs|length > 0 %}
             <!-- Modal -->
             <div class="modal fade bs-example-modal-lg" id="myModal_{{ business.id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
@@ -33,11 +39,11 @@
                         </div>
                         <div class="modal-body">
                             {% for job in business.jobs %}
- <div class="row">
-          <div class="col-md-4">{{job.title}}</div>
-          <div class="col-md-6 ">{{job.description}}</div>
-        </div>
-                                
+                                <div class="row">
+                                    <div class="col-md-4">{{job.title}}</div>
+                                    <div class="col-md-6 ">{{job.description}}</div>
+                                </div>
+
                             {% endfor %}
                         </div>
                         <div class="modal-footer">
@@ -52,7 +58,7 @@
                     </div>
                 </div>
             </div>
-
+{% endif %}
 
 
 

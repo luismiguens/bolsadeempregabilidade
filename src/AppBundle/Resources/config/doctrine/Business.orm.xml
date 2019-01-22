@@ -90,7 +90,7 @@
       </join-table>
     </many-to-many>
     
-    <one-to-many field="jobs" target-entity="Job" mapped-by="business" />
+    <one-to-many field="jobs" target-entity="Job" mapped-by="business" fetch="LAZY" />
     
     
   </entity>

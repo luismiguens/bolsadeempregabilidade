@@ -538,6 +538,18 @@ class Business {
     }
 
 
-    
+    function setUsers($users) {
+        $this->users = $users;
+    }
+
+    function setYears(\Doctrine\Common\Collections\Collection $years) {
+        $this->years = $years;
+    }
+
+    function setJobs(\Doctrine\Common\Collections\Collection $jobs) {
+        $this->jobs = $jobs;
+    }
+
+
 
 }

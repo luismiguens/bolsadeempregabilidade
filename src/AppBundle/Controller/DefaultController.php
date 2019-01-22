@@ -56,6 +56,7 @@ class DefaultController extends Controller {
 
         
         $businesses = $em->getRepository('AppBundle:Business')->findBusinessByYear($year);
+        
         //$businesses = $year->getBusiness();
         $speakers = $year->getSpeakers();
         $photos = $year->getPhotos();
