@@ -1,4 +1,4 @@
-{# empty Twig template #}
+
 <section id="sponsors" class="section align-center">
     <div class="container">
         <span class="icon section-icon icon-documents-bookmarks-12"></span>
@@ -8,18 +8,33 @@
         <br/>
         <div class="sponsors">
             {% for key,sponsor in sponsors %}
-                <div class="sponsor inline">
-                    <a targer="_blank" href="{{sponsor.website}}">
-                        <img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
-                    </a>
-                </div>
-                {#<div class="sponsor inline"><img src="assets/img/sponsors/sponsor2.png" alt=""></div>
-                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor3.png" alt=""></div>
-                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor4.png" alt=""></div>
-                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor5.png" alt=""></div>
-                <div class="sponsor inline"><img src="assets/img/sponsors/sponsor6.png" alt=""></div>
-                #}
+                {% if key <= 2 %}
+                    <div class="sponsor inline">
+                        <a targer="_blank" href="{{sponsor.website}}">
+                            <img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
+                        </a>
+                    </div>
+                {% endif %}
             {% endfor %}
+
+ </div>
+<div class="sponsors">
+
+            {% for key,sponsor in sponsors %}
+                {% if key > 2 %}
+                    <div class="sponsor inline">
+                        <a targer="_blank" href="{{sponsor.website}}">
+                            <img style="width: 160px" class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
+
+
         </div>
     </div>
 </section>
+
+
