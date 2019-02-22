@@ -8,7 +8,10 @@
         <br/>
         <div class="sponsors">
             {% for key,sponsor in sponsors %}
-                {% if key == 1 or key ==2 or key==7 %}
+                {% if sponsor.id == 1 or sponsor.id ==2 or sponsor.id==7 %}
+                    
+                    {{sponsor.id}}
+                    
                     <div class="sponsor inline">
                         <a targer="_blank" href="{{sponsor.website}}">
                             <img class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
@@ -21,7 +24,10 @@
 <div class="sponsors">
 
             {% for key,sponsor in sponsors %}
-                {% if key!=1 and key!=2 and key!=7 %}
+                
+                {{sponsor.id}}
+                
+                {% if sponsor.id!=1 and sponsor.id!=2 and sponsor.id!=7 %}
                     <div class="sponsor inline">
                         <a targer="_blank" href="{{sponsor.website}}">
                             <img style="width: 160px" class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
