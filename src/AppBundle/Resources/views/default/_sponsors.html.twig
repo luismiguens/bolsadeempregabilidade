@@ -21,7 +21,7 @@
 <div class="sponsors">
 
             {% for key,sponsor in sponsors %}
-                {% if key<>1 or key<>2 or key<>7 %}
+                {% if key!=1 or key!=2 or key!=7 %}
                     <div class="sponsor inline">
                         <a targer="_blank" href="{{sponsor.website}}">
                             <img style="width: 160px" class="img-responsive" src="{{ vich_uploader_asset(sponsor, 'imageFile') }}" alt="{{ sponsor.name }}" />
