@@ -10,6 +10,11 @@
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/business/new.html.twig</file>
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Photo.php</file>
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Entity/Job.php</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_sponsors.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_counters_2019.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_about_2019.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/AppBundle/translations/messages_2019.pt.xlf</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/AppBundle/translations/messages_2019.en.xlf</file>
         </group>
     </open-files>
 </project-private>

@@ -25,70 +25,108 @@
                 <script src="{{ asset('bundles/app/assets/js/html5shiv.js') }}"></script>
                 <script src="{{ asset('bundles/app/assets/js/respond.min.js') }}"></script>
         <![endif]-->
-        
-        
+
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-  gtag('config', 'UA-114385271-1');
-</script>
+            gtag('config', 'UA-114385271-1');
+        </script>
 
-        
-        
-    </head>
 
-    <body>{#
-        <div class="preloader-mask">
-            <div class="preloader"></div>
-        </div>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '424750818264620');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+    <img height="1" width="1" 
+         src="https://www.facebook.com/tr?id=424750818264620&ev=PageView
+         &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+
+
+</head>
+
+<body>{#
+    <div class="preloader-mask">
+        <div class="preloader"></div>
+    </div>
 #}
 
-        {% block body %}
+    {% block body %}
 
 
-        {% endblock %}
+    {% endblock %}
 
-        <div class="modal-window" data-modal="0" style="background-color: rgba(2, 2, 2, 0.85);">
-            <div class="modal-box iframe-box iframe-video">
-                <span class="close-btn icon icon-office-52"></span>
+    <div class="modal-window" data-modal="0" style="background-color: rgba(2, 2, 2, 0.85);">
+        <div class="modal-box iframe-box iframe-video">
+            <span class="close-btn icon icon-office-52"></span>
 
-                <iframe src="https://www.youtube.com/embed/O9CDdEmJnWs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            {#https://www.youtube.com/watch?v=K4lc_iJU8yU&feature=youtu.be#}
+            <iframe src="https://www.youtube.com/embed/O9CDdEmJnWs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
 
+        {#https://www.youtube.com/watch?v=K4lc_iJU8yU&feature=youtu.be#}
+    </div>
 
 
-        {% block javascripts %}
 
-            <!--[if lt IE 9]>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-1.11.3.min.js?ver=1') }}"></script>
-            <![endif]-->
-            <!--[if (gte IE 9) | (!IE)]><!-->
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-2.1.4.min.js?ver=1') }}"></script>
-            <!--<![endif]-->
+    {% block javascripts %}
 
-            {#<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>#}
-            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCK9zvL2InLNfRs2Q-X3a8yxyKJXD-Gma4"></script>
-            
-            
-            
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/bootstrap.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.validate.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/toastr.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.waypoints.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.appear.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.plugin.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.countTo.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/masonry.pkgd.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/modal-box.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('bundles/app/assets/js/ventcamp.js') }}"></script>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-1.11.3.min.js?ver=1') }}"></script>
+        <![endif]-->
+        <!--[if (gte IE 9) | (!IE)]><!-->
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery-2.1.4.min.js?ver=1') }}"></script>
+        <!--<![endif]-->
 
-        {% endblock %}
-    </body>
+        {#<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>#}
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCK9zvL2InLNfRs2Q-X3a8yxyKJXD-Gma4"></script>
+
+
+
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.validate.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/toastr.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.waypoints.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.appear.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.plugin.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/jquery.countTo.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/masonry.pkgd.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/modal-box.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/app/assets/js/ventcamp.js') }}"></script>
+
+    {% endblock %}
+</body>
 </html>
