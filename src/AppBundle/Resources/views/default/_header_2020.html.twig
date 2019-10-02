@@ -28,7 +28,7 @@
                     {% if app.user %}
                         <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="pull-right buy-btn">{% trans from 'messages_2020' %}Oportunidades{% endtrans %}</a>
                     {% else %}
-                        <a class="pull-right buy-btn" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2020' %}Candidata-te{% endtrans %}</a>
+                        <a class="pull-right buy-btn" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2020' %}Regista-te{% endtrans %}</a>
                     {% endif %}
                 </div>
             </div>
