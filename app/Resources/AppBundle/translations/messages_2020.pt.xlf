@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pt" target-language="pt" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="0b35f4b8b49c64304af4e9b7ba5dfc82" resname="ofertas de emprego">
+        <source>ofertas de emprego</source>
+        <target>ofertas de emprego</target>
+      </trans-unit>
+      <trans-unit id="dcfcc703b4dad82c3f554b716b2bcd55" resname="empresas">
+        <source>empresas</source>
+        <target>empresas</target>
+      </trans-unit>
+      <trans-unit id="e520201caed287b7044c6faac33347d8" resname="dias de evento">
+        <source>dias de evento</source>
+        <target>dias de evento</target>
+      </trans-unit>
+      <trans-unit id="24560f1a00dc6786dd3d8f2d0fd4a983" resname="m2 de oportunidades">
+        <source>m2 de oportunidades</source>
+        <target>m2 de oportunidades</target>
+      </trans-unit>
+      <trans-unit id="b199eda9ab28a189b31c9a878233df3e" resname="02 e 03 Março">
+        <source>02 e 03 Março</source>
+        <target>13 e 14 Março</target>
+      </trans-unit>
+      <trans-unit id="f5375095dff2ba30615b80de0a96ad40" resname="FIL, Lisboa">
+        <source>FIL, Lisboa</source>
+        <target>FIL, Lisboa</target>
+      </trans-unit>
+      <trans-unit id="ed5df946c056584faf44fb94758de1ab" resname="Bolsa de Empregabilidade">
+        <source>Bolsa de Empregabilidade</source>
+        <target>Bolsa de Empregabilidade</target>
+      </trans-unit>
+      <trans-unit id="1ffbc64a5c938d5b710cf7e45c51991c" resname="A Maior Feira de Emprego de Turismo em Portugal">
+        <source>A Maior Feira de Emprego de Turismo em Portugal</source>
+        <target>A Maior Feira de Emprego no Turismo em Portugal</target>
+      </trans-unit>
+      <trans-unit id="30cba195240dba73a52d3a6d2f81bab8" resname="Testemunhos">
+        <source>Testemunhos</source>
+        <target>Testemunhos</target>
+      </trans-unit>
+      <trans-unit id="c248fc7621c65238ca54a2a5fd273781" resname="o que as pessoas">
+        <source>o que as pessoas</source>
+        <target>o que as pessoas</target>
+      </trans-unit>
+      <trans-unit id="18c11f412527614ddfa4622e67b6149a" resname="dizem">
+        <source>dizem</source>
+        <target>dizem</target>
+      </trans-unit>
+      <trans-unit id="42e649b82eada6fe3872e79a1e464ebb" resname="É isso mesmo que eu quero que aconteça ao turismo, que seja cada vez mais um motor de desenvolvimento económico, mas seja também cada vez mais um motor de criação de emprego.">
+        <source>É isso mesmo que eu quero que aconteça ao turismo, que seja cada vez mais um motor de desenvolvimento económico, mas seja também cada vez mais um motor de criação de emprego.</source>
+        <target>É isso mesmo que eu quero que aconteça ao turismo, que seja cada vez mais um motor de desenvolvimento económico, mas seja também cada vez mais um motor de criação de emprego.</target>
+      </trans-unit>
+      <trans-unit id="82f4503dfd8b5e528d04c3a7f77c585b" resname="Ana Mendes Godinho">
+        <source>Ana Mendes Godinho</source>
+        <target>Ana Mendes Godinho</target>
+      </trans-unit>
+      <trans-unit id="ef82d2d07a2f0d9208e2c9a23c3678aa" resname="Secretária de Estado do Turismo">
+        <source>Secretária de Estado do Turismo</source>
+        <target>Secretária de Estado do Turismo</target>
+      </trans-unit>
+      <trans-unit id="e20c5ee71da572a92ab6e9132720ef19" resname="A Bolsa de empregabilidade na BTL representa não só uma excelente oportunidade para todos aqueles que estão à procura de trabalho, como também para as empresas que pretendem atrair os melhores talentos para as suas equipas.">
+        <source>A Bolsa de empregabilidade na BTL representa não só uma excelente oportunidade para todos aqueles que estão à procura de trabalho, como também para as empresas que pretendem atrair os melhores talentos para as suas equipas.</source>
+        <target>A Bolsa de empregabilidade na BTL representa não só uma excelente oportunidade para todos aqueles que estão à procura de trabalho, como também para as empresas que pretendem atrair os melhores talentos para as suas equipas.</target>
+      </trans-unit>
+      <trans-unit id="5fa53919ed9ef28d0a813b78a909b1c1" resname="Luís Araújo">
+        <source>Luís Araújo</source>
+        <target>Luís Araújo</target>
+      </trans-unit>
+      <trans-unit id="bdc1842e44075601301248fd8878b253" resname="Presidente do Turismo de Portugal">
+        <source>Presidente do Turismo de Portugal</source>
+        <target>Presidente do Turismo de Portugal</target>
+      </trans-unit>
+      <trans-unit id="29c02375598b174dc4e57f7109563101" resname="Numa altura em que o Turismo assume um papel primordial na economia nacional e na criação de emprego, a realização da Bolsa de Empregabilidade no âmbito da BTL, é uma excelente iniciativa que permitirá, num ambiente profissional, aproximar estudantes, empregadores, profissionais do setor e todos os interessados em trabalhar no apaixonante mundo do turismo.">
+        <source>Numa altura em que o Turismo assume um papel primordial na economia nacional e na criação de emprego, a realização da Bolsa de Empregabilidade no âmbito da BTL, é uma excelente iniciativa que permitirá, num ambiente profissional, aproximar estudantes, empregadores, profissionais do setor e todos os interessados em trabalhar no apaixonante mundo do turismo.</source>
+        <target>Numa altura em que o Turismo assume um papel primordial na economia nacional e na criação de emprego, a realização da Bolsa de Empregabilidade no âmbito da BTL, é uma excelente iniciativa que permitirá, num ambiente profissional, aproximar estudantes, empregadores, profissionais do setor e todos os interessados em trabalhar no apaixonante mundo do turismo.</target>
+      </trans-unit>
+      <trans-unit id="a353d0809d0379f0c7652fbe097e2256" resname="Francisco Moser">
+        <source>Francisco Moser</source>
+        <target>Francisco Moser</target>
+      </trans-unit>
+      <trans-unit id="a75f7bb998fd5d55b73e79ba30c46377" resname="Managing Director DHM">
+        <source>Managing Director DHM</source>
+        <target>Managing Director DHM</target>
+      </trans-unit>
+      <trans-unit id="91ee4de908c1c4aa9b8d3f086644a6d5" resname="Como estudante de Turismo e Gestão Hoteleira em constante busca de novas oportunidades, sei que a interação pessoal é bastante relevante no processo de recrutamento. Contudo, nem sempre é fácil chegar aos recrutadores. Na Bolsa de Empregabilidade consegui deixar de ser “mais um email” que os Diretores de RH recebem diariamente. Além de todos os contactos que fiz, arranjei um estágio na área que queria, por ter falado com um dos sócios da empresa.">
+        <source>Como estudante de Turismo e Gestão Hoteleira em constante busca de novas oportunidades, sei que a interação pessoal é bastante relevante no processo de recrutamento. Contudo, nem sempre é fácil chegar aos recrutadores. Na Bolsa de Empregabilidade consegui deixar de ser “mais um email” que os Diretores de RH recebem diariamente. Além de todos os contactos que fiz, arranjei um estágio na área que queria, por ter falado com um dos sócios da empresa.</source>
+        <target>Como estudante de Turismo e Gestão Hoteleira em constante busca de novas oportunidades, sei que a interação pessoal é bastante relevante no processo de recrutamento. Contudo, nem sempre é fácil chegar aos recrutadores. Na Bolsa de Empregabilidade consegui deixar de ser “mais um email” que os Diretores de RH recebem diariamente. Além de todos os contactos que fiz, arranjei um estágio na área que queria, por ter falado com um dos sócios da empresa.</target>
+      </trans-unit>
+      <trans-unit id="86ed117c28e675453dcb7f732401fd51" resname="Maria Sesinando">
+        <source>Maria Sesinando</source>
+        <target>Maria Sesinando</target>
+      </trans-unit>
+      <trans-unit id="6c1d2c53c7d783ffbd0bff1e7251a0e9" resname="Estudante de Turismo e Gestão Hoteleira">
+        <source>Estudante de Turismo e Gestão Hoteleira</source>
+        <target>Estudante de Turismo e Gestão Hoteleira</target>
+      </trans-unit>
+      <trans-unit id="1ace49424e5b5cb6332936438b9e498b" resname="Durante 2 dias,">
+        <source>Durante 2 dias,</source>
+        <target>Durante 2 dias,</target>
+      </trans-unit>
+      <trans-unit id="513cb4b9009f14565b188759b6900073" resname="mais de 10.000 oportunidades de abraçares o mundo do trabalho">
+        <source>mais de 10.000 oportunidades de abraçares o mundo do trabalho</source>
+        <target>mais de 10.000 oportunidades de abraçares o mundo do trabalho</target>
+      </trans-unit>
+      <trans-unit id="3c134238291fd95cc7edbeec95fbe455" resname="Informação geral">
+        <source>Informação geral</source>
+        <target>Informação geral</target>
+      </trans-unit>
+      <trans-unit id="52ab75149350b2d1ba68b564b791ad6c" resname="O que podes encontrar">
+        <source>O que podes encontrar</source>
+        <target>O que vais encontrar</target>
+      </trans-unit>
+      <trans-unit id="8484ab76c61f5413fe09ed23b7d79d12" resname="As nossas sugestões">
+        <source>As nossas sugestões</source>
+        <target>As nossas sugestões</target>
+      </trans-unit>
+      <trans-unit id="13144c2b9851139a638eed00fe84f172" resname="Acerca do evento">
+        <source>Acerca do evento</source>
+        <target>Acerca do evento</target>
+      </trans-unit>
+      <trans-unit id="c5947f616c7e32b6b3027bfe2b251c37" resname="A Bolsa de Empregabilidade é um evento onde vais encontrar a porta de entrada no mercado de trabalho. É o local de contacto entre employers e employees onde tu tens de estar.">
+        <source>A Bolsa de Empregabilidade é um evento onde vais encontrar a porta de entrada no mercado de trabalho. É o local de contacto entre employers e employees onde tu tens de estar.</source>
+        <target>A Bolsa de Empregabilidade é um evento impulsionado pelo Fórum Turismo que promove a empregabilidade na área do Turismo e das Viagens.</target>
+      </trans-unit>
+      <trans-unit id="34dc2293045b7089f5c05cb268856ff1" resname="O Fórum Turismo promove, pelo terceiro ano consecutivo, a realização da Bolsa de Empregabilidade que visa promover a empregabilidade de jovens formados em Turismo ou profissionais em busca de novas oportunidades.">
+        <source>O Fórum Turismo promove, pelo terceiro ano consecutivo, a realização da Bolsa de Empregabilidade que visa promover a empregabilidade de jovens formados em Turismo ou profissionais em busca de novas oportunidades.</source>
+        <target>Destinado desde jovens à procura da primeira oportunidade ou a profissionais em busca de um novo desafio. Em quatro edições a Bolsa de Empregabilidade contou com a presença de 180 empresas participantes e onde foram trocadas mais de 20.000 ofertas de trabalho.</target>
+      </trans-unit>
+      <trans-unit id="0825396a32edd14ceb720cecc2e91798" resname="Depois de duas edições, onde mais de 60 empresas já participaram e disponibilizaram o total de 4800 ofertas de trabalho, estamos de volta para a maior edição de sempre da Bolsa de Empregabilidade.">
+        <source>Depois de duas edições, onde mais de 60 empresas já participaram e disponibilizaram o total de 4800 ofertas de trabalho, estamos de volta para a maior edição de sempre da Bolsa de Empregabilidade.</source>
+        <target>Para a sua 5ª edição, a Bolsa de Empregabilidade compromete-se a acompanhar o sucesso do turismo em Portugal ao criar o maior hub de contratação nacional em Turismo neste que será o seu maior evento de sempre. Trazemos-te uma nova onda de oportunidades que esperemos que apanhes e leves contigo para o resto da tua vida profissional.</target>
+      </trans-unit>
+      <trans-unit id="d534f7a6a6a54842b19de73708c2f1de" resname="Este ano, a acompanhar o sucesso do Turismo em Portugal, trazemos para ti mais de 60 empresas que no total têm mais de 10 mil ofertas de trabalho na BTL - Bolsa de Turismo de Lisboa.">
+        <source>Este ano, a acompanhar o sucesso do Turismo em Portugal, trazemos para ti mais de 60 empresas que no total têm mais de 10 mil ofertas de trabalho na BTL - Bolsa de Turismo de Lisboa.</source>
+        <target>Toda esta energia ocorrerá dentro da BTL - Bolsa de Turismo de Lisboa no pavilhão multiusos da FIL nos dias 13 e 14 de Março, com uma dinâmica própria e formato interativo.</target>
+      </trans-unit>
+      <trans-unit id="becb1e10f050bbe2835339b0e6d876fc" resname="60 empresas à procura de talento.">
+        <source>60 empresas à procura de talento.</source>
+        <target>+ 100 empresas à procura de talento.</target>
+      </trans-unit>
+      <trans-unit id="1f877131ada735d0cce752e85f63bc11" resname="+ de 10000 ofertas de emprego.">
+        <source>+ de 10000 ofertas de emprego.</source>
+        <target>+ de 10.000 ofertas de empregos e estágios.</target>
+      </trans-unit>
+      <trans-unit id="6535e81ed31495157f2423f684293251" resname="Área restrita para entrevistas no momento.">
+        <source>Área restrita para entrevistas no momento.</source>
+        <target>2 dias de evento.</target>
+      </trans-unit>
+      <trans-unit id="c47e550263fe1c0b81b8c0bb255b8fa6" resname="Área de conferências para partilha de conhecimentos.">
+        <source>Área de conferências para partilha de conhecimentos.</source>
+        <target>Área exclusiva para partilha de conhecimentos, workshop e conferências.</target>
+      </trans-unit>
+      <trans-unit id="59e9e92aa1bc2e9f717856b0faf56164" resname="Networking com​empresas e estudantes nacionais e internacionais.">
+        <source>Networking com​empresas e estudantes nacionais e internacionais.</source>
+        <target>Networking com empresas nacionais e internacionais.</target>
+      </trans-unit>
+      <trans-unit id="70d152f2c96a580303ab233e4cbb0386" resname="Muitas oportunidades de alcançares o teu sonho.">
+        <source>Muitas oportunidades de alcançares o teu sonho.</source>
+        <target>Muitas oportunidades de alcançares o teu sonho.</target>
+      </trans-unit>
+      <trans-unit id="e391ed36d503116a87827dcfd6d84a48" resname="Faz o teu trabalho de casa e procura saber mais sobre quem está a contratar.">
+        <source>Faz o teu trabalho de casa e procura saber mais sobre quem está a contratar.</source>
+        <target>Faz o teu trabalho de casa e procura saber mais sobre quem está a contratar.</target>
+      </trans-unit>
+      <trans-unit id="9db6d3b82bc974a7e8eac8c3bd1253d7" resname="Atualiza e traz contigo muitos currículos.">
+        <source>Atualiza e traz contigo muitos currículos.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="9cac2b372cf21d2e420ba6560f65613e" resname="Antecipa as possíveis perguntas que te possam fazer.">
+        <source>Antecipa as possíveis perguntas que te possam fazer.</source>
+        <target>Antecipa as possíveis perguntas que te possam fazer.</target>
+      </trans-unit>
+      <trans-unit id="2a3235e80ca814c5f8ab06b51e7764f7" resname="Não te acanhes e fala com as empresas nas quais gostarias de trabalhar.">
+        <source>Não te acanhes e fala com as empresas nas quais gostarias de trabalhar.</source>
+        <target>Não te acanhes e fala com as empresas nas quais gostarias de trabalhar.</target>
+      </trans-unit>
+      <trans-unit id="d6100ae75c4d017d79af3efc247b7e02" resname="Não te esqueças, não há uma segunda oportunidade para causar uma primeira boa impressão. Tem atenção ao dress code.">
+        <source>Não te esqueças, não há uma segunda oportunidade para causar uma primeira boa impressão. Tem atenção ao dress code.</source>
+        <target>Não te esqueças, não há uma segunda oportunidade para causar uma primeira boa impressão. Tem atenção ao dress code.</target>
+      </trans-unit>
+      <trans-unit id="087ed6a145674efcce791f034f060888" resname="Empresas">
+        <source>Empresas</source>
+        <target>Empresas</target>
+      </trans-unit>
+      <trans-unit id="dd96727edf6e27db5f3762740d1f5f02" resname="Oradores">
+        <source>Oradores</source>
+        <target>Oradores</target>
+      </trans-unit>
+      <trans-unit id="49098c06473b94079cd2cb087eea7952" resname="Agenda">
+        <source>Agenda</source>
+        <target>Agenda</target>
+      </trans-unit>
+      <trans-unit id="92bea9f2d83947088731f2fed42455fb" resname="Patrocinadores">
+        <source>Patrocinadores</source>
+        <target>Parceiros</target>
+      </trans-unit>
+      <trans-unit id="1d32392e0cff53d576869e7e7f6c6e9a" resname="Contactos">
+        <source>Contactos</source>
+        <target>Contactos</target>
+      </trans-unit>
+      <trans-unit id="f825e69c367ba1cf9c9072898b19100c" resname="Inscreve-te">
+        <source>Inscreve-te</source>
+        <target>Inscreve-te</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

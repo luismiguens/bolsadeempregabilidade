@@ -1,0 +1,24 @@
+admin_background_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Background:index" }
+    methods:  GET
+
+admin_background_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Background:show" }
+    methods:  GET
+
+admin_background_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Background:new" }
+    methods:  [GET, POST]
+
+admin_background_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Background:edit" }
+    methods:  [GET, POST]
+
+admin_background_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Background:delete" }
+    methods:  DELETE

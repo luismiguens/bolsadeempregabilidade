@@ -121,6 +121,10 @@ class BusinessController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($business);
             $em->flush();
+            
+            return $this->redirectToRoute('admin_business_edit', array('id' => $business->getId()));
+            
+            
         }
 
         return $this->redirectToRoute('admin_business_index');

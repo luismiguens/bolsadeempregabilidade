@@ -4,8 +4,7 @@
 
 {% block body %}
     
-    
-        <style>
+    <style>
         
         
         form img{
@@ -16,10 +15,11 @@
     
     
     
+    <h1>Background edit</h1>
     
-    <h1>Photo edit</h1>
+    
     <hr/>
-
+<h4>Imagem com 1600*1200 px</h4>
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="alert alert-success">
             {{ flashMessage }}
@@ -44,5 +44,6 @@
         </li>
     </ul>
 {% endblock %}
+
 
 

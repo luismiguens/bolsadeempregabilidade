@@ -53,6 +53,8 @@ class DefaultController extends Controller {
 
         $yearNumber = $request->get('year');
         $year = $em->getRepository('AppBundle:Year')->findOneBy(['number' => $yearNumber]);
+        
+        $background = $em->getRepository('AppBundle:Background')->findOneBy(['year' => $yearNumber]);
 
         
         $businesses = $em->getRepository('AppBundle:Business')->findBusinessByYear($year);
@@ -68,6 +70,7 @@ class DefaultController extends Controller {
                     'speakers' => $speakers,
                     'photos' => $photos,
                     'sponsors' => $sponsors,
+                    'background' => $background
         ));
     }
 

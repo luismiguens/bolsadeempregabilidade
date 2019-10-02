@@ -14,6 +14,11 @@ app_admin_sponsor:
     resource: "@AppBundle/Resources/config/routing/sponsor.yml"
     prefix:   /admin_sponsor
     
+app_admin_background:
+    resource: "@AppBundle/Resources/config/routing/background.yml"
+    prefix:   /admin_background
+    
+    
     
 app_admin_fos_user:
     resource: "@AppBundle/Resources/config/routing/user.yml"
@@ -37,9 +42,9 @@ app_admin_job:
 
 homepage:
     path:      /{_locale}/{year}
-    defaults:  { _controller: AppBundle:Default:index, _locale: pt, year: 2019 }
+    defaults:  { _controller: AppBundle:Default:index, _locale: pt, year: 2020 }
     requirements:
-        year:  2018|2019
+        year:  2018|2019|2020
         _locale:  en|pt
 
         
@@ -53,9 +58,9 @@ after_login_route_name:
         
 editUser:
     path:      /{_locale}/{year}/{user}
-    defaults:  { _controller: AppBundle:Default:editUser, _locale: pt, year: 2019 }
+    defaults:  { _controller: AppBundle:Default:editUser, _locale: pt, year: 2020 }
     requirements:
-        year:  2018|2019
+        year:  2018|2019|2020
         _locale:  en|pt
         
         

@@ -1,0 +1,18 @@
+{# empty Twig template #}
+<section class="section bg-cover overlay overlay-clr bg4 light-text align-center">
+		<div class="container">
+			<h2>Faz o teu registo!</h2>
+			<p>Há vagas! Candidata-te já a Bolsa de Empregabilidade 2020<br /> </p>
+			<br />
+			<br />
+
+			{#<a href="#" class="btn btn-lg btn-outline">Register</a>#}
+                        
+                        
+                        {% if app.user %}
+                        <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="btn btn-lg btn-outline">{% trans from 'messages_2020' %}Oportunidades{% endtrans %}</a>
+                    {% else %}
+                        <a class="btn btn-lg btn-outline" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2020' %}Candidata-te{% endtrans %}</a>
+                    {% endif %}
+		</div>
+	</section>

@@ -1,0 +1,37 @@
+
+
+
+<header class="header header-black">
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="col-xs-12 visible-xs navigation-header">
+                <a href="#" class="buy-btn">Buy Tickets</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation7" aria-expanded="false" aria-controls="navigation3">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="col-xs-12 navigation-container">
+                <div id="navigation7" class="navbar-collapse collapse">
+                    <ul class="navigation-list pull-left light-text">
+                        <li class="navigation-item"><a href="#business" class="navigation-link">{% trans from 'messages_2020' %}Empresas{% endtrans %}</a></li>
+{#                        <li class="navigation-item"><a href="#speakers" class="navigation-link">{% trans from 'messages_2020' %}Oradores{% endtrans %}</a></li>
+                        <li class="navigation-item"><a href="#schedule" class="navigation-link">{% trans from 'messages_2020' %}Agenda{% endtrans %}</a></li>
+#}                        <li class="navigation-item"><a href="#feedback" class="navigation-link">{% trans from 'messages_2020' %}Testemunhos{% endtrans %}</a></li>
+                        <li class="navigation-item"><a href="#sponsors" class="navigation-link">{% trans from 'messages_2020' %}Patrocinadores{% endtrans %}</a></li>
+                        <li class="navigation-item"><a href="#contacts" class="navigation-link">{% trans from 'messages_2020' %}Contactos{% endtrans %}</a></li>
+                        <li class="navigation-item"><a href="{{ path('homepage', { 'year': 2020 }) }}" class="navigation-link">Edição 2020</a></li>
+
+                    </ul>
+                    {% if app.user %}
+                        <a href="{{ path('admin_fos_user_edit', { 'id': app.user.id }) }}" class="pull-right buy-btn">{% trans from 'messages_2020' %}Oportunidades{% endtrans %}</a>
+                    {% else %}
+                        <a class="pull-right buy-btn" href="{{ path('fos_user_security_login') }}">{% trans from 'messages_2020' %}Candidata-te{% endtrans %}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

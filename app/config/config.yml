@@ -80,6 +80,13 @@ vich_uploader:
     db_driver: orm
     twig:       true
     mappings:
+        background_image:
+            uri_prefix:         /uploads/background
+            upload_destination: %kernel.root_dir%/../web/uploads/background
+            inject_on_load:     true
+            delete_on_update:   true
+            delete_on_remove:   true
+            namer:              vich_uploader.namer_uniqid
         photo_image:
             uri_prefix:         /uploads/photo
             upload_destination: %kernel.root_dir%/../web/uploads/photo

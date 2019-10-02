@@ -1,0 +1,5 @@
+AppBundle\Entity\Background:
+    imageFile:
+        mapping:           background_image
+        filename_property: image
+
