@@ -53,6 +53,12 @@ class Job
     private $users;
 
     
+        /**
+     * @var integer
+     */
+    private $year;
+    
+    
        /**
      * Constructor
      */
@@ -277,14 +283,26 @@ class Job
     }
     
     
-    
-    
+    function getYear() {
+        return $this->year;
+    }
+
+    function setYear($year) {
+        $this->year = $year;
+    }
+
+        
     
     
     
     public function __toString() {
         return $this->getTitle();
     }
+    
+    
+    
+    
+    
     
     
 }

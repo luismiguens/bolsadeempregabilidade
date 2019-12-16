@@ -1,24 +1,40 @@
 {% extends 'base_user.html.twig' %}
 
+
+
+
+{% block stylesheets %}
+    {{ parent() }}
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+            <!-- Bootstrap core CSS -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/bootstrap.min.css') }}" />
+
+            <!-- Custom styles for this template -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/assets/css/dashboard.css') }}" />
+{% endblock %}
+
 {% block body %}
+
+
+
     <h1>Ofertas de Emprego</h1>
 
-    {#   <ul class="list-inline">
-            <li  class="list-inline-item">
-                <a class="btn btn-primary" href="{{ path('admin_job_new') }}">Create a new job</a>
-            </li>
-        </ul>#}
 
-
-    <table class="table table-bordered table-striped">
+    <table id="example" class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Titulo</th>
-                <th>Descrição</th>
-                <th>Empresa</th>
-                <th>Área</th>
-                <th>Localidade</th>
-                <th>Ofertas</th>
+                <th data-field="titulo" data-filter-control="input">Titulo</th>
+                <th data-field="descricao" data-filter-control="input">Descrição</th>
+                <th data-field="empresa" data-filter-control="input">Empresa</th>
+                <th data-field="area" data-filter-control="input">Area</th>
+                <th style="width: 10%" data-field="year" data-filter-control="input">Ano</th>
+                <th data-field="localidade" data-filter-control="input">Localidade</th>
+                <th data-field="ofertas" data-filter-control="input">Ofertas</th>
+
                 <th>Acções</th>
             </tr>
         </thead>
@@ -29,6 +45,7 @@
                     <td>{{ job.description }}</td>
                     <td>{{ job.business }}</td>
                     <td>{{ job.area }}</td>
+                    <td>{{ job.year }}</td>
                     <td>{{ job.location }}</td>
                     <td>{{ job.openings }}</td>
                     <td>
@@ -62,4 +79,21 @@
 
 
 
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+    </script>
 {% endblock %}

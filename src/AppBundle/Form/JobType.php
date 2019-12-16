@@ -72,7 +72,8 @@ class JobType extends AbstractType {
                         'Todas a regiões' => 'Todas a regiões',
                         'Anuncio para o estrangeiro' => 'Anuncio para o estrangeiro',
                     ), 'label' => "Localidade"))
-                ->add('openings', TextType::class, ['label' => "Vagas"]);
+                ->add('openings', TextType::class, ['label' => "Vagas"])
+                ->add('year', TextType::class, ['label' => "Ano"]);
         //->add('createdAt')
         //->add('business', null, ['label' => "Empresa"])
 

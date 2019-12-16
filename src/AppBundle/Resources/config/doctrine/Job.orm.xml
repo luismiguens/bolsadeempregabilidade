@@ -69,6 +69,17 @@ CHANGE COLUMN `description` `description` TEXT NULL DEFAULT NULL ;-->
     </many-to-many>
     
     
+        <field name="year" type="integer" column="year" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    
     
   </entity>
 </doctrine-mapping>
+
+
+
+<!--ALTER TABLE `bolsadeempregabilidade`.`job` 
+ADD COLUMN `year` INT NULL DEFAULT 2020 AFTER `created_at`;-->

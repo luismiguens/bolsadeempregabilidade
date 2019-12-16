@@ -16,10 +16,10 @@ class JobController extends Controller {
      * Lists all job entities.
      *
      */
-    public function indexAction() {
+    public function indexAction($year) {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('AppBundle:Job')->findAll();
+        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year));
 
         return $this->render('job/index.html.twig', array(
                     'jobs' => $jobs,
@@ -30,13 +30,14 @@ class JobController extends Controller {
      * Lists all job entities.
      *
      */
-    public function indexUserAction() {
+    public function indexUserAction($year) {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('AppBundle:Job')->findAll();
+        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year));
 
         return $this->render('job/index_user.html.twig', array(
                     'jobs' => $jobs,
+            'year'=> $year
         ));
     }
 
@@ -45,14 +46,10 @@ class JobController extends Controller {
      *
      */
     public function indexBusinessAction(\AppBundle\Entity\Business $business) {
-        $em = $this->getDoctrine()->getManager();
 
 
-        $user = $this->getUser();
-
-
-        //      $business_lista = $user->getBusiness();
-//$business = $business_lista[0];
+        //$business_lista = $user->getBusiness();
+        //$business = $business_lista[0];
         //$jobs = $em->getRepository('AppBundle:Job')->findAll();
 
         $jobs = $business->getJobs();
@@ -196,7 +193,7 @@ class JobController extends Controller {
             $tituloEmprego = $job->getTitle();
             $nomeCandidato = $user->getName();
             $emailCandidato = $user->getEmail();
-            $jobsEmpresa =  $this->generateUrl('admin_job_index_business', array('id' => $job->getBusiness()->getId()));
+            $jobsEmpresa = $this->generateUrl('admin_job_index_business', array('id' => $job->getBusiness()->getId()));
 
             $message = (new \Swift_Message('Candidatura a Emprego submetida em http://bolsadeempregabilidade.pt'))
                     ->setFrom('geral@forumturismo21.org', "Bolsadeempregabilidade.pt")
@@ -207,7 +204,7 @@ class JobController extends Controller {
                             . 'Nome do Candidato: ' . '' . $nomeCandidato . '<br/>'
                             . 'Email do Candidato: ' . '' . $emailCandidato . '<br/>'
                             . '<br/>'
-                            . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos '.$tituloEmprego.' clicando no seguinte <a href="http://bolsadeempregabilidade.pt'.$jobsEmpresa.'">link</a>'
+                            . 'Em anexo segue o curriculo do candidato e poderá consultar todos os candidatos ' . $tituloEmprego . ' clicando no seguinte <a href="http://bolsadeempregabilidade.pt' . $jobsEmpresa . '">link</a>'
                     )
                     ->setContentType("text/html");
             if ($user->getCv() != NULL):

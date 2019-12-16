@@ -6,10 +6,8 @@ namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-
 
 class User extends BaseUser {
 
@@ -29,9 +27,20 @@ class User extends BaseUser {
     private $linkedin;
     private $cv;
     private $cvFile;
-    //    private $createdAt = 'CURRENT_TIMESTAMP';
+    private $createdAt;
     private $updatedAt;
 
+    
+    function getCreatedAt() {
+        return $this->createdAt;
+    }
+
+    function setCreatedAt($createdAt) {
+        $this->createdAt = $createdAt;
+    }
+
+        
+    
     function getUpdatedAt() {
         return $this->updatedAt;
     }
@@ -65,10 +74,8 @@ class User extends BaseUser {
     function getJobs() {
         return $this->jobs;
     }
-    
-    
-    
-       /**
+
+    /**
      * Add job
      *
      * @param \AppBundle\Entity\Job $job
@@ -80,7 +87,6 @@ class User extends BaseUser {
 
         return $this;
     }
-    
 
     function setJobs(\Doctrine\Common\Collections\Collection $jobs) {
         $this->jobs = $jobs;
@@ -139,8 +145,7 @@ class User extends BaseUser {
             $this->updatedAt = new \DateTime('now');
         }
     }
-    
-    
+
     function getCvFile() {
         return $this->cvFile;
     }
@@ -164,9 +169,5 @@ class User extends BaseUser {
         // when displaying uploaded doc/image in the view.
         return 'uploads/curriculo';
     }
-    
 
-    
-    
-    
 }
