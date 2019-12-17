@@ -175,10 +175,24 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
+                                {#<li class="nav-item">
                                     <a class="nav-link " href="{{ path('admin_job_index') }}">
                                         <span data-feather="clipboard"></span>
                                         Ofertas 
+                                    </a>
+                                </li>#}
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2019}) }}">
+                                        <span data-feather="clipboard"></span>
+                                        Lista de Ofertas 2019
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2020}) }}">
+                                        <span data-feather="clipboard"></span>
+                                        Lista de Ofertas 2020
                                     </a>
                                 </li>
                                 
