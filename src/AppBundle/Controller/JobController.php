@@ -19,7 +19,7 @@ class JobController extends Controller {
     public function indexAction($year) {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year));
+        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year), array('createdAt'=>'desc'));
 
         return $this->render('job/index.html.twig', array(
                     'jobs' => $jobs,
@@ -33,7 +33,7 @@ class JobController extends Controller {
     public function indexUserAction($year) {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year));
+        $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year), array('createdAt'=>'desc'));
 
         return $this->render('job/index_user.html.twig', array(
                     'jobs' => $jobs,
