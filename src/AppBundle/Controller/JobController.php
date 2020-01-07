@@ -16,7 +16,7 @@ class JobController extends Controller {
      * Lists all job entities.
      *
      */
-    public function indexAction($year) {
+    public function indexAction($year=2020) {
         $em = $this->getDoctrine()->getManager();
 
         $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year), array('createdAt'=>'desc'));
@@ -30,7 +30,7 @@ class JobController extends Controller {
      * Lists all job entities.
      *
      */
-    public function indexUserAction($year) {
+    public function indexUserAction($year=2020) {
         $em = $this->getDoctrine()->getManager();
 
         $jobs = $em->getRepository('AppBundle:Job')->findBy(array('year' => $year), array('createdAt'=>'desc'));

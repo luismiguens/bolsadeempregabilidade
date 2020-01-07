@@ -1,5 +1,5 @@
 admin_job_index:
-    path:     /{year}
+    path:     /index/{year}
     defaults: { _controller: "AppBundle:Job:index" }
     methods:  GET
     
