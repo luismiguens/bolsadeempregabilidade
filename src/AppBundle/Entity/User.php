@@ -49,9 +49,15 @@ class User extends BaseUser {
         $this->updatedAt = $updatedAt;
     }
 
+    
+  
+    
+    
+    
     public function __construct() {
         parent::__construct();
         $this->jobs = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->createdAt = new \DateTime(); 
         // your own logic
     }
 
