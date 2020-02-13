@@ -21,9 +21,9 @@
 
         {% endblock %}
 
-        
-        
-        
+
+
+
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
@@ -62,206 +62,206 @@
                 s.parentNode.insertBefore(t, s)
             }(window, document, 'script',
                     'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '424750818264620');
+            fbq('init', '556887188244140');
             fbq('track', 'PageView');
         </script>
         <noscript>
     <img height="1" width="1" 
-         src="https://www.facebook.com/tr?id=424750818264620&ev=PageView
+         src="https://www.facebook.com/tr?id=556887188244140&ev=PageView
          &noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
-        
-        
-        
-    </head>
-
-    <body>
-        {# <nav class="navbar fixed-top flex-md-nowrap p-0 shadow navbar-dark" >
-           <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>
-          
-           <ul class="navbar-nav px-3">
-             <li class="nav-item text-nowrap">
-               <a class="nav-link" href="#">Sign out</a>
-             </li>
-           </ul>
-         </nav>#}
-
-        {#        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-                    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>#}
 
 
 
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-            <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ path('homepage')}}">Bolsa de Empregabilidade &nbsp;</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="{{ path('homepage')}}#business" class="nav-link">{% trans from 'messages_2019' %}Empresas{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#speakers" class="nav-link">{% trans from 'messages_2019' %}Oradores{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#schedule" class="nav-link">{% trans from 'messages_2019' %}Agenda{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#feedback" class="nav-link">{% trans from 'messages_2019' %}Testemunhos{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sponsors" class="nav-link">{% trans from 'messages_2019' %}Patrocinadores{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contacts" class="nav-link">{% trans from 'messages_2019' %}Contactos{% endtrans %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ path('homepage', { 'year': 2019 }) }}" class="nav-link">Edição 2019</a>
-                    </li>
-                </ul>
-            </div>
-            <ul class="navbar-nav px-3">
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Sign out</a>
+</head>
+
+<body>
+    {# <nav class="navbar fixed-top flex-md-nowrap p-0 shadow navbar-dark" >
+       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>
+      
+       <ul class="navbar-nav px-3">
+         <li class="nav-item text-nowrap">
+           <a class="nav-link" href="#">Sign out</a>
+         </li>
+       </ul>
+     </nav>#}
+
+    {#        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Bolsa de Empregabilidade</a>#}
+
+
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ path('homepage')}}">Bolsa de Empregabilidade &nbsp;</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="{{ path('homepage')}}#business" class="nav-link">{% trans from 'messages_2019' %}Empresas{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#speakers" class="nav-link">{% trans from 'messages_2019' %}Oradores{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#schedule" class="nav-link">{% trans from 'messages_2019' %}Agenda{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#feedback" class="nav-link">{% trans from 'messages_2019' %}Testemunhos{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sponsors" class="nav-link">{% trans from 'messages_2019' %}Patrocinadores{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacts" class="nav-link">{% trans from 'messages_2019' %}Contactos{% endtrans %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('homepage', { 'year': 2019 }) }}" class="nav-link">Edição 2019</a>
                 </li>
             </ul>
-        </nav>
-
-
-
-
-        <div class="container-fluid">
-            <div class="row">
-                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                    <div class="sidebar-sticky">
-                        <ul class="nav flex-column">
-
-                            {#{% if  app.user.id in [10, 11, 13]  %}#}
-                                {% if  app.user.id in constant('AppBundle\\Utils\\Utils::DEFAULT_ADMINS')  %}
-                                
-                                
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('admin_business_index') }}">
-                                        <span data-feather="globe"></span>
-                                        Empresas 
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_speaker_index') }}">
-                                        <span data-feather="mic"></span>
-                                        Oradores 
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_photo_index') }}">
-                                        <span data-feather="image"></span>
-                                        Galeria 
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_sponsor_index') }}">
-                                        <span data-feather="dollar-sign"></span>
-                                        Patrocinadores 
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_fos_user_index') }}">
-                                        <span data-feather="user"></span>
-                                        Participantes 
-                                    </a>
-                                </li>
-
-                                {#<li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_job_index') }}">
-                                        <span data-feather="clipboard"></span>
-                                        Ofertas 
-                                    </a>
-                                </li>#}
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2019}) }}">
-                                        <span data-feather="clipboard"></span>
-                                        Lista de Ofertas 2019
-                                    </a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2020}) }}">
-                                        <span data-feather="clipboard"></span>
-                                        Lista de Ofertas 2020
-                                    </a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ path('admin_background_index') }}">
-                                        <span data-feather="clipboard"></span>
-                                        Backgrounds 
-                                    </a>
-                                </li>
-                            {% endif %}
-                        </ul>
-
-                    </div>
-                </nav>
-
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                    <br/>
-                    {% block body %}
-
-                    {% endblock %}
-                </main>
-            </div>
         </div>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+
+                        {#{% if  app.user.id in [10, 11, 13]  %}#}
+                        {% if  app.user.id in constant('AppBundle\\Utils\\Utils::DEFAULT_ADMINS')  %}
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('admin_business_index') }}">
+                                    <span data-feather="globe"></span>
+                                    Empresas 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_speaker_index') }}">
+                                    <span data-feather="mic"></span>
+                                    Oradores 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_photo_index') }}">
+                                    <span data-feather="image"></span>
+                                    Galeria 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_sponsor_index') }}">
+                                    <span data-feather="dollar-sign"></span>
+                                    Patrocinadores 
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_fos_user_index') }}">
+                                    <span data-feather="user"></span>
+                                    Participantes 
+                                </a>
+                            </li>
+
+                            {#<li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_job_index') }}">
+                                    <span data-feather="clipboard"></span>
+                                    Ofertas 
+                                </a>
+                            </li>#}
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2019}) }}">
+                                    <span data-feather="clipboard"></span>
+                                    Lista de Ofertas 2019
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_job_index', { 'year': 2020}) }}">
+                                    <span data-feather="clipboard"></span>
+                                    Lista de Ofertas 2020
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('admin_background_index') }}">
+                                    <span data-feather="clipboard"></span>
+                                    Backgrounds 
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <br/>
+                {% block body %}
+
+                {% endblock %}
+            </main>
+        </div>
+    </div>
 
 
 
 
 
 
-        {% block javascripts %}
+    {% block javascripts %}
 
 
-            <!-- Bootstrap core JavaScript
-       ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script>window.jQuery || document.write('<script src="{{ asset('bundles/app/assets/js/dashboard/jquery-slim.min.js') }}"><\/script>')</script>
-            <script src="{{ asset('bundles/app/assets/js/dashboard/popper.min.js') }}"></script>
-            <script src="{{ asset('bundles/app/assets/js/dashboard/bootstrap.min.js') }}"></script>
+        <!-- Bootstrap core JavaScript
+   ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="{{ asset('bundles/app/assets/js/dashboard/jquery-slim.min.js') }}"><\/script>')</script>
+        <script src="{{ asset('bundles/app/assets/js/dashboard/popper.min.js') }}"></script>
+        <script src="{{ asset('bundles/app/assets/js/dashboard/bootstrap.min.js') }}"></script>
 
-            <!-- Icons -->
-            <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-            <script>
-                feather.replace()
-            </script>
-
-
-
-
-
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-
-                gtag('config', 'UA-114385271-1');
-            </script>
+        <!-- Icons -->
+        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+        <script>
+            feather.replace()
+        </script>
 
 
 
-        {% endblock %}
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114385271-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-114385271-1');
+        </script>
 
 
 
-    </body>
+    {% endblock %}
+
+
+
+</body>
 </html>
 
 
