@@ -21,6 +21,8 @@
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/job/new.html.twig</file>
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/config/routing/job.yml</file>
             <file>file:/home/luis/sfprojects/bolsadeempregabilidade/src/AppBundle/Resources/views/default/_footer.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/job/submit_user.html.twig</file>
+            <file>file:/home/luis/sfprojects/bolsadeempregabilidade/app/Resources/views/job/edit.html.twig</file>
         </group>
     </open-files>
 </project-private>
